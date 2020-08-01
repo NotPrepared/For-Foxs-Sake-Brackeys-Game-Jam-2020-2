@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void Update()
     {
-        if (!timer.isTimeOver())
+        if (!timer.isTimeOver() || ignoreTimerOver)
         {
             if (!timer.isPaused())
             {
@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour, GroundProvider
         else
         {
             // Time is over
-            if (!ignoreTimerOver) handleOutOfTime();
+            handleOutOfTime();
         }
     }
 
@@ -93,8 +93,8 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void handlePastLayerChange()
     {
-        presentLayerTileMap.gameObject.SetActive(false);
         pastLayerTileMap.gameObject.SetActive(true);
+        presentLayerTileMap.gameObject.SetActive(false);
     }
 
     private void handlePresentLayerChange()
