@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370375248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4612,7 +4612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1295585325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4649,7 +4649,7 @@ GameObject:
   - component: {fileID: 1367980280}
   - component: {fileID: 1367980279}
   - component: {fileID: 1367980273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4787,10 +4787,11 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_GroundCheck: {fileID: 1295585325}
   m_CeilingCheck: {fileID: 370375248}
   m_CrouchDisableCollider: {fileID: 1367980279}
+  slamEnabled: 1
   doubleJumpEnabled: 1
   doubleJumpCooldown: 200
   OnLandEvent:

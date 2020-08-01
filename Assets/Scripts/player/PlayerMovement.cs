@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 // ReSharper disable once CheckNamespace
-public class PlayerMovement : MonoBehaviour {
-        
+public class PlayerMovement : MonoBehaviour
+{
     public CharacterController2D controller;
 
     public float runSpeed = 40f;
@@ -14,28 +14,20 @@ public class PlayerMovement : MonoBehaviour {
     bool crouch = false;
 
     // Update is called once per frame
-    void Update () {
-
-        horizontalMove =  Input.GetAxisRaw("Horizontal") * runSpeed;
+    void Update()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
         }
-            
-        /*
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
-        */
 
+
+        crouch = Input.GetKey(KeyCode.S);
     }
-          
-    void FixedUpdate ()
+
+    void FixedUpdate()
     {
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);

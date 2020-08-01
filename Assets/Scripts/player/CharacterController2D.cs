@@ -15,7 +15,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck; // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider; // A collider that will be disabled when crouching
-    [SerializeField] private bool doubleJumpEnabled = true; // Double Jump
+    [SerializeField] private bool slamEnabled = true; // Double Jump
+    [SerializeField] private bool doubleJumpEnabled = true; // Slam to Ground
     [SerializeField] private float doubleJumpCooldown = 2f; // Double Jump Cooldown
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -72,6 +73,12 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
+        
+        if (slamEnabled && crouch && !m_Grounded && !m_wasCrouching)
+        {
+            m_Rigidbody2D.AddForce(new Vector2(0, -2 * m_JumpForce));
+        }
+        
         // If crouching, check to see if the character can stand up
         if (!crouch)
         {
@@ -81,6 +88,7 @@ public class CharacterController2D : MonoBehaviour
                 crouch = true;
             }
         }
+        
 
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
