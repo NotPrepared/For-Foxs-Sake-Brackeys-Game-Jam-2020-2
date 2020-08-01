@@ -47,7 +47,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
-        
+
         this.OnLandEvent.AddListener(() => { usedDoubleJump = false; });
     }
 
@@ -73,12 +73,11 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
-        
         if (slamEnabled && crouch && !m_Grounded && !m_wasCrouching)
         {
             m_Rigidbody2D.AddForce(new Vector2(0, -2 * m_JumpForce));
         }
-        
+
         // If crouching, check to see if the character can stand up
         if (!crouch)
         {
@@ -88,7 +87,7 @@ public class CharacterController2D : MonoBehaviour
                 crouch = true;
             }
         }
-        
+
 
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -141,10 +140,11 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
-        
+
         // Double Jump
-        doubleJumpCooldownCounter += Time.deltaTime;
-        if (!m_Grounded && jump && !usedDoubleJump && doubleJumpEnabled) // && doubleJumpCooldownCounter >= doubleJumpCooldown)
+        //doubleJumpCooldownCounter += Time.deltaTime;
+        if (!m_Grounded && jump && !usedDoubleJump && doubleJumpEnabled && m_Rigidbody2D.velocity.y <= 0.1f
+        ) // && doubleJumpCooldownCounter >= doubleJumpCooldown)
         {
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             doubleJumpCooldownCounter = 0f;
