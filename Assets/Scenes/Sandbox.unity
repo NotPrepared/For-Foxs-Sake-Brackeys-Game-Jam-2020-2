@@ -4791,6 +4791,8 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1295585325}
   m_CeilingCheck: {fileID: 370375248}
   m_CrouchDisableCollider: {fileID: 1367980279}
+  doubleJumpEnabled: 1
+  doubleJumpCooldown: 200
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -15,6 +15,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck; // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider; // A collider that will be disabled when crouching
+    [SerializeField] private bool doubleJumpEnabled = true; // Double Jump
+    [SerializeField] private float doubleJumpCooldown = 2f; // Double Jump Cooldown
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded; // Whether or not the player is grounded.
@@ -22,6 +24,8 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true; // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+    private float doubleJumpCooldownCounter = 0f;
+    private bool usedDoubleJump = false;
 
     [Header("Events")] [Space] public UnityEvent OnLandEvent;
 
@@ -42,6 +46,8 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+        
+        this.OnLandEvent.AddListener(() => { usedDoubleJump = false; });
     }
 
     private void FixedUpdate()
@@ -126,6 +132,15 @@ public class CharacterController2D : MonoBehaviour
                 // ... flip the player.
                 Flip();
             }
+        }
+        
+        // Double Jump
+        doubleJumpCooldownCounter += Time.deltaTime;
+        if (!m_Grounded && jump && !usedDoubleJump && doubleJumpEnabled) // && doubleJumpCooldownCounter >= doubleJumpCooldown)
+        {
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            doubleJumpCooldownCounter = 0f;
+            usedDoubleJump = true;
         }
 
         // If the player should jump...
