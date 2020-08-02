@@ -239,7 +239,8 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= 0.1f)
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce));
+            
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + -1*m_Rigidbody2D.velocity.y));
             usedDoubleJump = true;
         }
     }
