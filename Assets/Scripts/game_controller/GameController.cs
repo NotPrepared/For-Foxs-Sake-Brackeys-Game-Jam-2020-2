@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private readonly Func<bool> pauseKeyCheck = () => Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape);
     private readonly Func<bool> changeTimeLayerKeyCheck = () => Input.GetKeyDown(KeyCode.Q);
+    private readonly Func<bool> muteAudioKeyCheck = () => Input.GetKeyDown(KeyCode.M);
 
     private void Awake()
     {
@@ -39,10 +40,16 @@ public class GameController : MonoBehaviour, GroundProvider
         var handleLayerChange = isPresent ? (Action) handlePresentLayerChange : handlePastLayerChange;
         handleLayerChange();
         timer.resumeTimer();
+        AudioController.instance.PlayAudio(GameAudioType.ST_01);
     }
 
     private void Update()
     {
+        if (muteAudioKeyCheck())
+        { // Toggle Mute State
+            AudioController.instance.IsMuted = !AudioController.instance.IsMuted;
+        }
+
         if (!timer.isTimeOver() || ignoreTimerOver)
         {
             if (!timer.isPaused())
