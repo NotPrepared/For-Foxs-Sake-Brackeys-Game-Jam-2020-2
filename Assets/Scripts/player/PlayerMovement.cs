@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    private readonly Func<bool> rewindPlayerKeyCheck = () => Input.GetKeyDown(KeyCode.W);
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         crouch = Input.GetKey(KeyCode.S);
+        if (rewindPlayerKeyCheck())
+        {
+            controller.startRewind();
+        }
     }
 
     void FixedUpdate()
