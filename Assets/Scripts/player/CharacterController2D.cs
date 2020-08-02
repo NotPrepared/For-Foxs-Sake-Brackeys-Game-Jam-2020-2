@@ -112,7 +112,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
             var lastPoint = playerRewindPositions.Pop();
             m_transform.position = lastPoint.position;
             m_transform.rotation = lastPoint.rotation;
-            m_Rigidbody2D = lastPoint.rigidbody;
+            m_Rigidbody2D = lastPoint.rigidbody2D;
             if (playerRewindPositions.Count < 1)
             {
                 stopRewind();
@@ -290,8 +290,14 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 heading = (heading.y >= 0) ? Vector2.up : Vector2.down;
             }
 
-            Debug.LogWarning("Pushing with heading in x:" + heading.x + " and y:" + heading.y);
-            activePushable.transform.position += heading.normalized * (0.01F * force);
+            if (activePushable.usesRB)
+            {
+                activePushable.gameObject.GetComponent<Rigidbody2D>().AddForce(heading.normalized * (force * 200f));
+            }
+            else
+            {
+                activePushable.transform.position += heading.normalized * (0.01F * force);
+            }
         }
     }
 
@@ -310,13 +316,13 @@ public class RewindPoint
 {
     public Vector2 position;
     public Quaternion rotation;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody2D;
 
-    public RewindPoint(Vector2 position, Quaternion rotation, Rigidbody2D rigidbody)
+    public RewindPoint(Vector2 position, Quaternion rotation, Rigidbody2D rigidbody2D)
     {
         this.position = position;
         this.rotation = rotation;
-        this.rigidbody = rigidbody;
+        this.rigidbody2D = rigidbody2D;
     }
 
     public RewindPoint(Transform transform, Rigidbody2D rigidbody2D) : this(transform.position, transform.rotation,

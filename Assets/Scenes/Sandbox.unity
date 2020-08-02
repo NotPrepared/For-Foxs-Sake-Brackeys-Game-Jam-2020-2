@@ -5300,7 +5300,7 @@ MonoBehaviour:
   slamEnabled: 1
   m_slamForce: -100
   positionRewindEnabled: 1
-  pushForce: 20
+  pushForce: 5
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5515,6 +5515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 60
+  usesRB: 0
   targets:
   - {fileID: 1367980277}
 --- !u!212 &1968681563

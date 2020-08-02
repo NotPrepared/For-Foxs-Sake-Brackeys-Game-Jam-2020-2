@@ -7,10 +7,10 @@ using UnityEngine;
 public abstract class Pushable : MonoBehaviour
 {
     [SerializeField] public float weight;
+    [SerializeField] public bool usesRB;
     [SerializeField] private List<MonoBehaviour> targets;
     private HashSet<IPusher> pushables;
 
-   
 
     private void Awake()
     {
@@ -37,10 +37,9 @@ public abstract class Pushable : MonoBehaviour
     {
         if (other.gameObject.GetComponent<MonoBehaviour>() is IPusher pusher)
         {
-          pusher.pushStopped(this);
+            pusher.pushStopped(this);
         }
     }
-    
 }
 
 public class PushablePlatform : Pushable
