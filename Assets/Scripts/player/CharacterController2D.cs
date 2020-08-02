@@ -6,20 +6,19 @@ using UnityEngine.Events;
 // ReSharper disable once CheckNamespace
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField] private float m_JumpForce = 400f; // Amount of force added when the player jumps.
+    private const float InitialJumpForce = 50f;
 
-    [Range(0, 1)] [SerializeField]
-    private float m_CrouchSpeed = .36f; // Amount of maxSpeed applied to crouching movement. 1 = 100%
+    [Header("Dependencies")] [SerializeField]
+    private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
 
-    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f; // How much to smooth out the movement
-    [SerializeField] private bool m_AirControl; // Whether or not a player can steer while jumping;
-    private GroundProvider m_WhatIsGroundProvider; // A mask determining what is ground to the character
-    [SerializeField] private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_CeilingCheck; // A position marking where to check for ceilings
-    [SerializeField] private Collider2D m_CrouchDisableCollider; // A collider that will be disabled when crouching
-    [SerializeField] private bool slamEnabled = true; // Double Jump
-    [SerializeField] private bool doubleJumpEnabled = true; // Slam to Ground
-    [SerializeField] private float doubleJumpCooldown = 2f; // Double Jump Cooldown
+
+    [Header("General")] [Space] [Range(0, .3f)] [SerializeField]
+    private float m_MovementSmoothing = .05f; // How much to smooth out the movement
+
+    [SerializeField] private bool m_AirControl; // Whether or not a player can steer while jumping;
+
+    private GroundProvider m_WhatIsGroundProvider; // A mask determining what is ground to the character
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded; // Whether or not the player is grounded.
@@ -27,13 +26,35 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true; // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
-    private bool usedDoubleJump;
     private Transform m_transform;
+
+
+    private bool hasCrouchDisableCollider;
+
+    [Header("Move: Jump")] [Space] [SerializeField]
+    private float m_JumpForce = InitialJumpForce; // Amount of force added when the player jumps.
+
+    [Header("Move: Double Jump")] [Space] [SerializeField]
+    private bool doubleJumpEnabled = true;
+
+    [SerializeField] private float m_doubleJumpForce = InitialJumpForce;
+    private bool usedDoubleJump;
+
+    [Header("Move: Crouch")] [Space] [Range(0, 1)] [SerializeField]
+    private float m_CrouchSpeed = .36f; // Amount of maxSpeed applied to crouching movement. 1 = 100%
+
+    [SerializeField] private Collider2D m_CrouchDisableCollider; // A collider that will be disabled when crouching
+
+    [Header("Move: Slam")] [Space] [SerializeField]
+    private bool slamEnabled = true;
+
+    [SerializeField] private float m_slamForce = -2 * InitialJumpForce;
+
+    [Header("Move: Position Rewind")] [Space] [SerializeField]
+    private bool positionRewindEnabled = true;
 
     private Stack<RewindPoint> playerRewindPositions;
     private bool isRewinding;
-
-    private bool hasCrouchDisableCollider;
 
     [Header("Events")] [Space] public UnityEvent OnLandEvent;
 
@@ -52,7 +73,7 @@ public class CharacterController2D : MonoBehaviour
         m_WhatIsGroundProvider = GameController.Instance;
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_transform = transform;
-        hasCrouchDisableCollider =  m_CrouchDisableCollider != null;
+        hasCrouchDisableCollider = m_CrouchDisableCollider != null;
 
         playerRewindPositions = new Stack<RewindPoint>();
 
@@ -77,7 +98,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isRewinding)
+        if (positionRewindEnabled && isRewinding)
         {
             if (playerRewindPositions.Count < 1)
             {
@@ -210,7 +231,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (crouch && !m_Grounded && !m_wasCrouching)
         {
-            m_Rigidbody2D.AddForce(new Vector2(0, -2 * m_JumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(0, m_slamForce));
         }
     }
 
@@ -218,7 +239,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= 0.1f)
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce));
             usedDoubleJump = true;
         }
     }

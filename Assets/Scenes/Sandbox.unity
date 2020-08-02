@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 886953470}
   - component: {fileID: 886953469}
   - component: {fileID: 886953471}
+  - component: {fileID: 886953472}
   m_Layer: 10
   m_Name: PastGroundMap
   m_TagString: Untagged
@@ -801,6 +802,27 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!50 &886953472
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886953467}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &931677902
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +901,7 @@ GameObject:
   - component: {fileID: 978122496}
   - component: {fileID: 978122495}
   - component: {fileID: 978122494}
+  - component: {fileID: 978122498}
   m_Layer: 9
   m_Name: PresentGroundMap
   m_TagString: Untagged
@@ -4936,6 +4959,27 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!50 &978122498
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978122492}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1295585324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,17 +5158,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d563434658b34d11afdb4751aa7d1e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 50
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
   m_GroundCheck: {fileID: 1295585325}
   m_CeilingCheck: {fileID: 370375248}
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_JumpForce: 50
+  doubleJumpEnabled: 1
+  m_doubleJumpForce: 50
+  m_CrouchSpeed: 0.36
   m_CrouchDisableCollider: {fileID: 1367980279}
   slamEnabled: 1
-  doubleJumpEnabled: 1
-  doubleJumpCooldown: 200
+  m_slamForce: -100
+  positionRewindEnabled: 1
   OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJumpEvent:
     m_PersistentCalls:
       m_Calls: []
   OnCrouchEvent:
