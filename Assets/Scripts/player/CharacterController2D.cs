@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 // ReSharper disable once CheckNamespace
-public class CharacterController2D : MonoBehaviour
+public class CharacterController2D : MonoBehaviour, IPusher
 {
     private const float InitialJumpForce = 50f;
 
@@ -55,6 +55,9 @@ public class CharacterController2D : MonoBehaviour
 
     private Stack<RewindPoint> playerRewindPositions;
     private bool isRewinding;
+
+    [Header("Move: Push")] [Space] [Range(0, 100f)] [SerializeField]
+    private float pushForce = 20f;
 
     [Header("Events")] [Space] public UnityEvent OnLandEvent;
 
@@ -185,6 +188,8 @@ public class CharacterController2D : MonoBehaviour
                 // Disable one of the colliders when crouching
                 if (hasCrouchDisableCollider)
                     m_CrouchDisableCollider.enabled = false;
+
+                applyPush(pushForce);
             }
             else
             {
@@ -239,8 +244,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= 0.1f)
         {
-            
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + -1*m_Rigidbody2D.velocity.y));
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + -1 * m_Rigidbody2D.velocity.y));
             usedDoubleJump = true;
         }
     }
@@ -266,6 +270,39 @@ public class CharacterController2D : MonoBehaviour
         Vector3 theScale = m_transform.localScale;
         theScale.x *= -1;
         m_transform.localScale = theScale;
+    }
+
+    private Pushable activePushable = null;
+
+    public void applyPush(float force)
+    {
+        if (activePushable != null)
+        {
+            var heading = activePushable.transform.position - transform.position;
+            if (Mathf.Abs(heading.x) > Mathf.Abs(heading.y))
+            {
+                // Push X
+                heading = (heading.x >= 0) ? Vector2.right : Vector2.left;
+            }
+            else
+            {
+                // Push y
+                heading = (heading.y >= 0) ? Vector2.up : Vector2.down;
+            }
+
+            Debug.LogWarning("Pushing with heading in x:" + heading.x + " and y:" + heading.y);
+            activePushable.transform.position += heading.normalized * (0.01F * force);
+        }
+    }
+
+    public void pushStarted(float collectiveWeight, Pushable target)
+    {
+        activePushable = target;
+    }
+
+    public void pushStopped(Pushable target)
+    {
+        activePushable = null;
     }
 }
 
