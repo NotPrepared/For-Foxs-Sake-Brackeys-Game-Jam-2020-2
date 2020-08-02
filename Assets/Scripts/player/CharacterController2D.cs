@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 // ReSharper disable once CheckNamespace
-public class CharacterController2D : MonoBehaviour
+public class CharacterController2D : MonoBehaviour, IPusher
 {
     private const float InitialJumpForce = 50f;
 
@@ -55,6 +55,9 @@ public class CharacterController2D : MonoBehaviour
 
     private Stack<RewindPoint> playerRewindPositions;
     private bool isRewinding;
+
+    [Header("Move: Push")] [Space] [Range(0, 100f)] [SerializeField]
+    private float pushForce = 20f;
 
     [Header("Events")] [Space] public UnityEvent OnLandEvent;
 
@@ -109,7 +112,7 @@ public class CharacterController2D : MonoBehaviour
             var lastPoint = playerRewindPositions.Pop();
             m_transform.position = lastPoint.position;
             m_transform.rotation = lastPoint.rotation;
-            m_Rigidbody2D = lastPoint.rigidbody;
+            m_Rigidbody2D = lastPoint.rigidbody2D;
             if (playerRewindPositions.Count < 1)
             {
                 stopRewind();
@@ -185,6 +188,8 @@ public class CharacterController2D : MonoBehaviour
                 // Disable one of the colliders when crouching
                 if (hasCrouchDisableCollider)
                     m_CrouchDisableCollider.enabled = false;
+
+                applyPush(pushForce);
             }
             else
             {
@@ -239,7 +244,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= 0.1f)
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + -1 * m_Rigidbody2D.velocity.y));
             usedDoubleJump = true;
         }
     }
@@ -266,19 +271,58 @@ public class CharacterController2D : MonoBehaviour
         theScale.x *= -1;
         m_transform.localScale = theScale;
     }
+
+    private Pushable activePushable = null;
+
+    public void applyPush(float force)
+    {
+        if (activePushable != null)
+        {
+            var heading = activePushable.transform.position - transform.position;
+            if (Mathf.Abs(heading.x) > Mathf.Abs(heading.y))
+            {
+                // Push X
+                heading = (heading.x >= 0) ? Vector2.right : Vector2.left;
+            }
+            else
+            {
+                // Push y
+                heading = (heading.y >= 0) ? Vector2.up : Vector2.down;
+            }
+
+            if (activePushable.usesRB)
+            {
+                activePushable.gameObject.GetComponent<Rigidbody2D>().AddForce(heading.normalized * (force * 200f));
+            }
+            else
+            {
+                activePushable.transform.position += heading.normalized * (0.01F * force);
+            }
+        }
+    }
+
+    public void pushStarted(float collectiveWeight, Pushable target)
+    {
+        activePushable = target;
+    }
+
+    public void pushStopped(Pushable target)
+    {
+        activePushable = null;
+    }
 }
 
 public class RewindPoint
 {
     public Vector2 position;
     public Quaternion rotation;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody2D;
 
-    public RewindPoint(Vector2 position, Quaternion rotation, Rigidbody2D rigidbody)
+    public RewindPoint(Vector2 position, Quaternion rotation, Rigidbody2D rigidbody2D)
     {
         this.position = position;
         this.rotation = rotation;
-        this.rigidbody = rigidbody;
+        this.rigidbody2D = rigidbody2D;
     }
 
     public RewindPoint(Transform transform, Rigidbody2D rigidbody2D) : this(transform.position, transform.rotation,
