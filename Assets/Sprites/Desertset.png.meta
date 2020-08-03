@@ -1,0 +1,764 @@
+fileFormatVersion: 2
+guid: e87d1734f534e9241b7d1263286a2a7a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3643569683689037704
+    second: Desertset_0
+  - first:
+      213: -1281318999465725306
+    second: Desertset_1
+  - first:
+      213: -654393087789166794
+    second: Desertset_2
+  - first:
+      213: -5789277665152736680
+    second: Desertset_3
+  - first:
+      213: 5810369956704005957
+    second: Desertset_4
+  - first:
+      213: 1636154708884854789
+    second: Desertset_5
+  - first:
+      213: -6288308511413446037
+    second: Desertset_6
+  - first:
+      213: 782650998212040723
+    second: Desertset_7
+  - first:
+      213: 7792874248028571868
+    second: Desertset_8
+  - first:
+      213: 8463417214162394393
+    second: Desertset_9
+  - first:
+      213: -8628150572160201675
+    second: Desertset_10
+  - first:
+      213: -3410498339415187524
+    second: Desertset_11
+  - first:
+      213: 441357524216762248
+    second: Desertset_12
+  - first:
+      213: -2129858217756594090
+    second: Desertset_13
+  - first:
+      213: 6372747566383467249
+    second: Desertset_14
+  - first:
+      213: 7714596662352133309
+    second: Desertset_15
+  - first:
+      213: -5662642462677705784
+    second: Desertset_16
+  - first:
+      213: 4572393941103322830
+    second: Desertset_17
+  - first:
+      213: 9199130959014958897
+    second: Desertset_18
+  - first:
+      213: -660589352229801326
+    second: Desertset_19
+  - first:
+      213: -1835226767394196476
+    second: Desertset_20
+  - first:
+      213: -5064185939548839830
+    second: Desertset_21
+  - first:
+      213: 8483481987510387570
+    second: Desertset_22
+  - first:
+      213: -4234462279516206313
+    second: Desertset_23
+  - first:
+      213: -4723332271478820715
+    second: Desertset_24
+  - first:
+      213: 6677001068720954604
+    second: Desertset_25
+  - first:
+      213: -5704944118720566565
+    second: Desertset_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Desertset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87025595da07f6dc0800000000000000
+      internalID: -3643569683689037704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682f2e0a827d73ee0800000000000000
+      internalID: -1281318999465725306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f0bda24f02be6f0800000000000000
+      internalID: -654393087789166794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e77ee2aa58afa0800000000000000
+      internalID: -5789277665152736680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fa1f2e0b492a050800000000000000
+      internalID: 5810369956704005957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5081aacf90ac4b610800000000000000
+      internalID: 1636154708884854789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad22bc9b07bb8a0800000000000000
+      internalID: -6288308511413446037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318988bafe88cda00800000000000000
+      internalID: 782650998212040723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8480517d9d52c60800000000000000
+      internalID: 7792874248028571868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d531c7d19147570800000000000000
+      internalID: 8463417214162394393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ccecdb4c6a24880800000000000000
+      internalID: -8628150572160201675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf191474d97ba0d0800000000000000
+      internalID: -3410498339415187524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fc2e17454002600800000000000000
+      internalID: 441357524216762248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650fba44c393172e0800000000000000
+      internalID: -2129858217756594090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa8589b52c807850800000000000000
+      internalID: 6372747566383467249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_15
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcb9ec6ac0cf0b60800000000000000
+      internalID: 7714596662352133309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb5d02aea04a61b0800000000000000
+      internalID: -5662642462677705784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6ac985018647f30800000000000000
+      internalID: 4572393941103322830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_18
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137926e3ed0e9af70800000000000000
+      internalID: 9199130959014958897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_19
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292ffedeb7d15d6f0800000000000000
+      internalID: -660589352229801326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4043e2f7af6f786e0800000000000000
+      internalID: -1835226767394196476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60e9ac18b568b9b0800000000000000
+      internalID: -5064185939548839830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2734bf39be16bb570800000000000000
+      internalID: 8483481987510387570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b45aeedfa2c35c0800000000000000
+      internalID: -4234462279516206313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590bd5a035a537eb0800000000000000
+      internalID: -4723332271478820715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_25
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec1402881979ac50800000000000000
+      internalID: 6677001068720954604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desertset_26
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdae434dc87f3d0b0800000000000000
+      internalID: -5704944118720566565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
