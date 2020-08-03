@@ -17,6 +17,9 @@ public class AudioControlSyncController : MonoBehaviour
     {
         var audioController = AudioController.instance;
         
+        baseVolumeSliders.ForEach(slider => { slider.SetValueWithoutNotify(audioController.BaseVolume);});
+        muteToggles.ForEach(toggle => toggle.SetIsOnWithoutNotify(audioController.IsMuted));
+        
         baseVolumeSliders.ForEach(slider => slider.onValueChanged.AddListener(vol => audioController.BaseVolume = vol));
         muteToggles.ForEach(toggle => toggle.onValueChanged.AddListener(isMuted => audioController.IsMuted = isMuted));
         
