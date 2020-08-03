@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -14,21 +16,38 @@ public class MenuButton : MonoBehaviour
     [FormerlySerializedAs("onClickEvent")] [SerializeField]
     public Button.ButtonClickedEvent onClick;
 
+    private static readonly int Pressed = Animator.StringToHash("pressed");
+    private static readonly int Selected = Animator.StringToHash("selected");
+
+    private void Start()
+    {
+        var eventTrigger = gameObject.GetComponent<EventTrigger>();
+        var enterEvent = new EventTrigger.Entry {eventID = EventTriggerType.PointerEnter};
+        enterEvent.callback.AddListener(_ => menuButtonController.index = thisIndex);
+
+        var clickEvent = new EventTrigger.Entry {eventID = EventTriggerType.PointerClick};
+        clickEvent.callback.AddListener(_ => animator.SetBool(Pressed, true));
+        
+        eventTrigger.triggers.Add(enterEvent);
+        eventTrigger.triggers.Add(clickEvent);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(menuButtonController.index == thisIndex)
         {
-            animator.SetBool ("selected", true);
+            animator.SetBool (Selected, true);
             if(Input.GetAxisRaw("Submit") == 1){
-                animator.SetBool ("pressed", true);
-            }else if (animator.GetBool ("pressed")){
-                animator.SetBool ("pressed", false);
+                animator.SetBool (Pressed, true);
+            }else if (animator.GetBool (Pressed)){
+                animator.SetBool (Pressed, false);
                 //animatorFunctions.disableOnce = true;
                 onClick.Invoke();
             }
         }else{
-            animator.SetBool ("selected", false);
+            animator.SetBool (Selected, false);
         }
     }
+    
 }
