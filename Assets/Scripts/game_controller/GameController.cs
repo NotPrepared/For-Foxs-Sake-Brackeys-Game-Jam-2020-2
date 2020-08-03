@@ -19,7 +19,25 @@ public class GameController : MonoBehaviour, GroundProvider
     public Tilemap pastLayerTileMap;
     private LayerMask presentLayerMask;
     private LayerMask pastLayerMask;
-    
+
+    [Serializable]
+    private enum UIState
+    {
+        IN_GAME,
+        PAUSE,
+        GAME_OVER
+    }
+
+    [Serializable]
+    private class UIActivator
+    {
+        public UIState activeState;
+        public GameObject subUIRoot;
+    }
+
+    [SerializeField] private UIState currentState = UIState.IN_GAME;
+    [SerializeField] private List<UIActivator> subUIs;
+
     private ITimer timer;
 
     private readonly Func<bool> pauseKeyCheck = () => Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape);
@@ -41,12 +59,14 @@ public class GameController : MonoBehaviour, GroundProvider
         handleLayerChange();
         timer.resumeTimer();
         AudioController.instance.PlayAudio(GameAudioType.ST_01);
+        handleUIStateChange(currentState);
     }
 
     private void Update()
     {
         if (muteAudioKeyCheck())
-        { // Toggle Mute State
+        {
+            // Toggle Mute State
             AudioController.instance.IsMuted = !AudioController.instance.IsMuted;
         }
 
@@ -75,20 +95,44 @@ public class GameController : MonoBehaviour, GroundProvider
     {
         // Handle imminent pause of game
         timer.pauseTimer();
-        TODO.asLogWarning("Display Pause UI");
+        handleUIStateChange(UIState.PAUSE);
     }
 
-    private void handleResumeGame()
+    // UI Accessed
+    // ReSharper disable once MemberCanBePrivate.Global
+    public void handleResumeGame()
     {
         // Handle imminent pause of game
-        TODO.asLogWarning("Hide Pause UI");
+        handleUIStateChange(UIState.IN_GAME);
         timer.resumeTimer();
     }
 
     private void handleOutOfTime()
     {
         TODO.asLogWarning("Game End not implemented");
+        handleUIStateChange(UIState.GAME_OVER);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // UI Accessed
+    // ReSharper disable once UnusedMember.Global
+    public void handleRestartScene()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    // UI Accessed
+    // ReSharper disable once UnusedMember.Global
+    public void handleSwitchToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    // UI Accessed
+    // ReSharper disable once UnusedMember.Global
+    public void handleQuitGame()
+    {
+        Application.Quit();
     }
 
     private void handleToggleTimeLayer()
@@ -110,6 +154,30 @@ public class GameController : MonoBehaviour, GroundProvider
         pastLayerTileMap.gameObject.SetActive(false);
     }
 
+    private void handleUIStateChange(UIState state)
+    {
+        void applyOnList(UIState curState)
+        {
+            subUIs.ForEach(it => { it.subUIRoot.SetActive(it.activeState == curState); });
+        }
+
+        switch (state)
+        {
+            case UIState.IN_GAME:
+                applyOnList(UIState.IN_GAME);
+                break;
+            case UIState.PAUSE:
+                applyOnList(UIState.PAUSE);
+                break;
+            case UIState.GAME_OVER:
+                applyOnList(UIState.GAME_OVER);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(state), state, null);
+        }
+        currentState = state;
+        
+    }
 
 
     public LayerMask getGroundLayer() => isPresent ? presentLayerMask : pastLayerMask;
