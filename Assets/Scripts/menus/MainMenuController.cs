@@ -37,7 +37,7 @@ public class MainMenuController : MonoBehaviour
     /// </summary>
     private static void openSandbox()
     {
-        openLevel("Sandbox");
+        openLevel(GameScenes.SANDBOX);
     }
 
     private void Start()

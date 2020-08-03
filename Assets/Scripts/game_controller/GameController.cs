@@ -125,7 +125,7 @@ public class GameController : MonoBehaviour, GroundProvider
     // ReSharper disable once UnusedMember.Global
     public void handleSwitchToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(GameScenes.MAIN_MENU);
     }
 
     // UI Accessed
