@@ -7580,6 +7580,9 @@ MonoBehaviour:
   slamEnabled: 1
   m_slamForce: -100
   positionRewindEnabled: 1
+  startPositionPrefab: {fileID: 712228202905419467, guid: d8ebe6c40ab3caf4c9e8a34c612339dc,
+    type: 3}
+  maxRecordSeconds: 5
   pushForce: 5
   OnLandEvent:
     m_PersistentCalls:

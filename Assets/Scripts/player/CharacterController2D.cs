@@ -53,8 +53,15 @@ public class CharacterController2D : MonoBehaviour, IPusher
     [Header("Move: Position Rewind")] [Space] [SerializeField]
     private bool positionRewindEnabled = true;
 
+    [SerializeField] private GameObject startPositionPrefab;
+    private GameObject instantiatedStartPositionObj;
+
+    [SerializeField] private float maxRecordSeconds;
+
     private Stack<RewindPoint> playerRewindPositions;
     private bool isRewinding;
+    private bool isRecordingRewind;
+
 
     [Header("Move: Push")] [Space] [Range(0, 100f)] [SerializeField]
     private float pushForce = 20f;
@@ -91,12 +98,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
             OnJumpEvent = new UnityEvent();
         }
 
-        OnLandEvent.AddListener(() =>
-        {
-            usedDoubleJump = false;
-            playerRewindPositions.Clear();
-        });
-        OnJumpEvent.AddListener(() => { playerRewindPositions.Clear(); });
+        OnLandEvent.AddListener(() => { usedDoubleJump = false; });
     }
 
     private void FixedUpdate()
@@ -137,7 +139,34 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 }
             }
 
+            if (isRecordingRewind)
+            {
+                // ReSharper disable once CompareOfFloatsByEqualityOperator
+                if (Time.timeScale == 0) return;
+
+                if (playerRewindPositions.Count < Mathf.RoundToInt(maxRecordSeconds / Time.fixedDeltaTime))
+                {
+                    playerRewindPositions.Push(new RewindPoint(m_transform, m_Rigidbody2D));
+                }
+                else
+                {
+                    timeExceededRewind();
+                }
+            }
+        }
+    }
+
+    public void invokeRewind()
+    {
+        if (isRecordingRewind)
+        {
+            startRewind();
+        }
+        else
+        {
             playerRewindPositions.Push(new RewindPoint(m_transform, m_Rigidbody2D));
+            instantiatedStartPositionObj = Instantiate(startPositionPrefab, m_transform.position, Quaternion.identity);
+            isRecordingRewind = true;
         }
     }
 
@@ -149,8 +178,17 @@ public class CharacterController2D : MonoBehaviour, IPusher
 
     public void stopRewind()
     {
+        Destroy(instantiatedStartPositionObj);
+        playerRewindPositions.Clear();
         isRewinding = false;
+        isRecordingRewind = false;
         m_Rigidbody2D.isKinematic = false;
+    }
+
+    private void timeExceededRewind()
+    {
+        // TODO Play sound or sth
+        stopRewind();
     }
 
 
