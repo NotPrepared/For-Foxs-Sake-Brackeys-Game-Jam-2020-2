@@ -734,6 +734,16 @@ PrefabInstance:
       propertyPath: m_textInfo.spaceCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1979380805263965374, guid: dcb24fc111c8aee468e5f057b9999379,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979380805505525357, guid: dcb24fc111c8aee468e5f057b9999379,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 475
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb24fc111c8aee468e5f057b9999379, type: 3}
 --- !u!1 &1411359319
