@@ -35,6 +35,7 @@ public class AudioController : MonoBehaviour
         {
             isMuted = value;
             onMutedChanged?.Invoke(isMuted);
+            PersistenceHandler.updateVolumeMuted(isMuted);
         }
     }
 
@@ -76,6 +77,7 @@ public class AudioController : MonoBehaviour
         }
         BaseVolume = PersistenceHandler.getBaseVolume(MAX_VOLUME);
         musicVolume = PersistenceHandler.getMusicVolume(MAX_VOLUME);
+        IsMuted = PersistenceHandler.getVolumeMuted(isMuted);
         audioTable = new Hashtable();
         jobTable = new Hashtable();
         GenerateAudioTable();
