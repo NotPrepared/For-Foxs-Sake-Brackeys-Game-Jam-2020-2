@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -71,10 +72,12 @@ public class AudioController : MonoBehaviour
         {
             onVolumeChanged = new VolumeEvent();
         }
+
         if (onMutedChanged != null)
         {
             onMutedChanged = new MuteEvent();
         }
+
         BaseVolume = PersistenceHandler.getBaseVolume(MAX_VOLUME);
         musicVolume = PersistenceHandler.getMusicVolume(MAX_VOLUME);
         IsMuted = PersistenceHandler.getVolumeMuted(isMuted);
@@ -171,6 +174,20 @@ public class AudioController : MonoBehaviour
         onVolumeChanged.AddListener(vol => track.source.volume = vol);
         onMutedChanged.AddListener(muted => track.source.mute = muted);
 
+        if (track.pauseWithTimer)
+        {
+            TimerImpl.Instance.onPauseAccess.AddListener(isPause =>
+            {
+                if (isPause)
+                {
+                    track.source.Pause();
+                }
+                else
+                {
+                    track.source.UnPause();
+                }
+            });   
+        }
 
         switch (job.action)
         {

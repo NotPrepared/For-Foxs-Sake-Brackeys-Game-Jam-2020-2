@@ -5237,6 +5237,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 659080926680772865, guid: afec05fc24bf83b419cea8210af8aa6c,
+        type: 3}
+      propertyPath: tracks.Array.data[0].pauseWithTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 659080926680772866, guid: afec05fc24bf83b419cea8210af8aa6c,
         type: 3}
       propertyPath: m_LocalPosition.x

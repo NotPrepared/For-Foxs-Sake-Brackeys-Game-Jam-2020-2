@@ -1,9 +1,11 @@
-﻿
-using System;
+﻿using System;
+using UnityEngine.Events;
 
 // ReSharper disable once CheckNamespace
 public interface ITimer
 {
+    PauseEvent onPauseAccess { get; }
+
     /// <summary>
     /// Pauses the game and shows the menu.
     /// </summary>
@@ -42,4 +44,8 @@ public interface ITimer
     /// Adds time to the counter.
     /// </summary>
     void addTime(float timeIncrement);
+}
+
+public class PauseEvent : UnityEvent<bool>
+{
 }
