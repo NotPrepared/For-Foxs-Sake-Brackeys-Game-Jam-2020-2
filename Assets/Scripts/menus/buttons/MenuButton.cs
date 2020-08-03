@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
@@ -8,9 +9,10 @@ public class MenuButton : MonoBehaviour
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] Animator animator;
     //[SerializeField] AnimatorFunctions animatorFunctions;
-    [SerializeField] int thisIndex;
+    [SerializeField] public int thisIndex;
 
-    [SerializeField] private Button.ButtonClickedEvent onClickEvent;
+    [FormerlySerializedAs("onClickEvent")] [SerializeField]
+    public Button.ButtonClickedEvent onClick;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +25,7 @@ public class MenuButton : MonoBehaviour
             }else if (animator.GetBool ("pressed")){
                 animator.SetBool ("pressed", false);
                 //animatorFunctions.disableOnce = true;
-                onClickEvent.Invoke();
+                onClick.Invoke();
             }
         }else{
             animator.SetBool ("selected", false);

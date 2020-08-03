@@ -21,7 +21,7 @@ public static class PersistenceHandler
     public static bool hasActiveGame()
     {
         TODO.asLogWarning("Logic for acquiring active game not implemented");
-        return !true;
+        return true;
     }
 
     public static void continueGame()

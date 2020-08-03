@@ -7,11 +7,14 @@ using UnityEngine.UI;
 // ReSharper disable once CheckNamespace
 public class MainMenuController : MonoBehaviour
 {
-    public Button newGameORResetBtn;
+    public MenuButtonController menuButtonController;
+    
+    public MenuButton newGameORResetBtn;
     public TMP_Text newGameORResetBtnLabel;
-    public Button continueBtn;
+    public MenuButton continueBtn;
 
-    public Button sandboxBtn;
+    public MenuButton sandboxBtn;
+    public MenuButton quitBtn;
     
     private static void openLevel(string sceneName) => SceneManager.LoadScene(sceneName);
     
@@ -44,6 +47,7 @@ public class MainMenuController : MonoBehaviour
     {
         newGameORResetBtn.onClick.AddListener(newGame);
         sandboxBtn.onClick.AddListener(openSandbox);
+        quitBtn.onClick.AddListener(Application.Quit);
         updateUI();
     }
 
@@ -51,12 +55,26 @@ public class MainMenuController : MonoBehaviour
         // Check if an active Game exists
         if (PersistenceHandler.hasActiveGame())
         {
+            continueBtn.thisIndex = 0;
+            newGameORResetBtn.thisIndex = 1;
+            sandboxBtn.thisIndex = 2;
+            quitBtn.thisIndex = 3;
+            
+            menuButtonController.index = 0;
+            menuButtonController.maxIndex = 3;
+            
             newGameORResetBtnLabel.text = "Reset Game";
             continueBtn.gameObject.SetActive(true);
             continueBtn.onClick.AddListener(continueGame);
         }
         else
         {
+            continueBtn.thisIndex = -1;
+            newGameORResetBtn.thisIndex = 0;
+            sandboxBtn.thisIndex = 1;
+            quitBtn.thisIndex = 2;
+            menuButtonController.index = 0;
+            menuButtonController.maxIndex = 2;
             newGameORResetBtnLabel.text = "New Game";
             continueBtn.gameObject.SetActive(false);
             continueBtn.onClick.RemoveAllListeners();

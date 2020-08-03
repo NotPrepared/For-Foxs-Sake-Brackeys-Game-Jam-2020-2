@@ -5,7 +5,7 @@ public class MenuButtonController : MonoBehaviour
 {
     public int index;
     [SerializeField] bool keyDown;
-    [SerializeField] int maxIndex;
+    [SerializeField] public int maxIndex;
     public AudioSource audioSource;
 
     void Start()
