@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour, GroundProvider
 {
     public static GameController Instance;
 
+    [SerializeField] private GameObject player;
+
     public List<TextMeshProUGUI> timerTextOuts;
     public bool ignoreTimerOver = false;
 
@@ -60,6 +62,12 @@ public class GameController : MonoBehaviour, GroundProvider
         timer.resumeTimer();
         AudioController.instance.PlayAudio(GameAudioType.ST_01);
         handleUIStateChange(currentState);
+        player.GetComponent<PlayerHealthController>().onHealthChange.AddListener(it => {
+            if (it <= 0)
+            {
+                handlePlayerNoHealth();
+            }
+        });
     }
 
     private void Update()
@@ -112,6 +120,11 @@ public class GameController : MonoBehaviour, GroundProvider
         TODO.asLogWarning("Game End not implemented");
         handleUIStateChange(UIState.GAME_OVER);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    private void handlePlayerNoHealth()
+    {
+        handleUIStateChange(UIState.GAME_OVER);
     }
 
     // UI Accessed
