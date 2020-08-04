@@ -148,9 +148,11 @@ public class GameController : MonoBehaviour, GroundProvider
         Application.Quit();
     }
 
-    private void handleToggleTimeLayer()
+    private void handleToggleTimeLayer() => changeLayer(!isPresent);
+
+    public void changeLayer(bool toPresent)
     {
-        isPresent = !isPresent;
+        isPresent = toPresent;
         var handleLayer = isPresent ? (Action) handlePresentLayerChange : handlePastLayerChange;
         handleLayer();
     }

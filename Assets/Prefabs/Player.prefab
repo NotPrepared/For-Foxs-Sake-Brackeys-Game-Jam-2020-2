@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 283846421176874847}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,6 +181,9 @@ MonoBehaviour:
   dieBelowY: -200
   maxHealth: 100
   currentHealth: 100
+  onHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &283846421176874832
 MonoBehaviour:
   m_ObjectHideFlags: 0
