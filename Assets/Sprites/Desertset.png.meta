@@ -83,6 +83,78 @@ TextureImporter:
   - first:
       213: -5704944118720566565
     second: Desertset_26
+  - first:
+      213: 9084339116994057299
+    second: Desertset_0
+  - first:
+      213: 8551745038051670625
+    second: Desertset_1
+  - first:
+      213: -1735634518432477854
+    second: Desertset_2
+  - first:
+      213: 977769248926864384
+    second: Desertset_3
+  - first:
+      213: -150580556835443541
+    second: Desertset_4
+  - first:
+      213: 6991381440370678935
+    second: Desertset_5
+  - first:
+      213: 2607567716461836498
+    second: Desertset_6
+  - first:
+      213: -6701964831390514536
+    second: Desertset_7
+  - first:
+      213: 7600772058731790050
+    second: Desertset_8
+  - first:
+      213: 8038770650751315349
+    second: Desertset_9
+  - first:
+      213: -5703566541310882309
+    second: Desertset_10
+  - first:
+      213: 3490581375970753084
+    second: Desertset_11
+  - first:
+      213: 248628541846157543
+    second: Desertset_12
+  - first:
+      213: 7030642325216388039
+    second: Desertset_13
+  - first:
+      213: -5227244140029242756
+    second: Desertset_14
+  - first:
+      213: 6995694852943186867
+    second: Desertset_15
+  - first:
+      213: -5076319755795605761
+    second: Desertset_16
+  - first:
+      213: 6236166495749947363
+    second: Desertset_17
+  - first:
+      213: 116681501152076158
+    second: Desertset_18
+  - first:
+      213: -6565481685431299013
+    second: Desertset_19
+  - first:
+      213: -7855810547753402321
+    second: Desertset_20
+  - first:
+      213: -2012326465203558219
+    second: Desertset_21
+  - first:
+      213: -9010140648835330089
+    second: Desertset_22
+  - first:
+      213: 4338868710510917193
+    second: Desertset_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +194,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 4
+  spriteExtrude: 0
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -142,7 +214,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -154,7 +226,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -166,10 +238,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -194,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87025595da07f6dc0800000000000000
-      internalID: -3643569683689037704
+      spriteID: 354dd97cb4e021e70800000000000000
+      internalID: 9084339116994057299
       vertices: []
       indices: 
       edges: []
@@ -215,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682f2e0a827d73ee0800000000000000
-      internalID: -1281318999465725306
+      spriteID: 16a77c29dc6eda670800000000000000
+      internalID: 8551745038051670625
       vertices: []
       indices: 
       edges: []
@@ -236,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f0bda24f02be6f0800000000000000
-      internalID: -654393087789166794
+      spriteID: 26d0dece999c9e7e0800000000000000
+      internalID: -1735634518432477854
       vertices: []
       indices: 
       edges: []
@@ -257,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852e77ee2aa58afa0800000000000000
-      internalID: -5789277665152736680
+      spriteID: 004169293fbb19d00800000000000000
+      internalID: 977769248926864384
       vertices: []
       indices: 
       edges: []
@@ -278,8 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54fa1f2e0b492a050800000000000000
-      internalID: 5810369956704005957
+      spriteID: bac2eb708c709edf0800000000000000
+      internalID: -150580556835443541
       vertices: []
       indices: 
       edges: []
@@ -299,8 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5081aacf90ac4b610800000000000000
-      internalID: 1636154708884854789
+      spriteID: 79c9d8ac060660160800000000000000
+      internalID: 6991381440370678935
       vertices: []
       indices: 
       edges: []
@@ -320,8 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ad22bc9b07bb8a0800000000000000
-      internalID: -6288308511413446037
+      spriteID: 2d8fb7bc501ff2420800000000000000
+      internalID: 2607567716461836498
       vertices: []
       indices: 
       edges: []
@@ -341,8 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 318988bafe88cda00800000000000000
-      internalID: 782650998212040723
+      spriteID: 892cecf8e76ddf2a0800000000000000
+      internalID: -6701964831390514536
       vertices: []
       indices: 
       edges: []
@@ -362,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd8480517d9d52c60800000000000000
-      internalID: 7792874248028571868
+      spriteID: 2ee3c63baed5b7960800000000000000
+      internalID: 7600772058731790050
       vertices: []
       indices: 
       edges: []
@@ -383,8 +455,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91d531c7d19147570800000000000000
-      internalID: 8463417214162394393
+      spriteID: 59d2edcc0537f8f60800000000000000
+      internalID: 8038770650751315349
       vertices: []
       indices: 
       edges: []
@@ -404,8 +476,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53ccecdb4c6a24880800000000000000
-      internalID: -8628150572160201675
+      spriteID: bfd8c50137cd8d0b0800000000000000
+      internalID: -5703566541310882309
       vertices: []
       indices: 
       edges: []
@@ -425,8 +497,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf191474d97ba0d0800000000000000
-      internalID: -3410498339415187524
+      spriteID: c3ab45e7449017030800000000000000
+      internalID: 3490581375970753084
       vertices: []
       indices: 
       edges: []
@@ -446,8 +518,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88fc2e17454002600800000000000000
-      internalID: 441357524216762248
+      spriteID: 7e873cd675e437300800000000000000
+      internalID: 248628541846157543
       vertices: []
       indices: 
       edges: []
@@ -467,8 +539,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650fba44c393172e0800000000000000
-      internalID: -2129858217756594090
+      spriteID: 7c36951e1fbd19160800000000000000
+      internalID: 7030642325216388039
       vertices: []
       indices: 
       edges: []
@@ -488,8 +560,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fa8589b52c807850800000000000000
-      internalID: 6372747566383467249
+      spriteID: c72905756291577b0800000000000000
+      internalID: -5227244140029242756
       vertices: []
       indices: 
       edges: []
@@ -509,8 +581,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcb9ec6ac0cf0b60800000000000000
-      internalID: 7714596662352133309
+      spriteID: 3bb05ba6763b51160800000000000000
+      internalID: 6995694852943186867
       vertices: []
       indices: 
       edges: []
@@ -530,8 +602,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cb5d02aea04a61b0800000000000000
-      internalID: -5662642462677705784
+      spriteID: ff6518dd31a4d89b0800000000000000
+      internalID: -5076319755795605761
       vertices: []
       indices: 
       edges: []
@@ -551,8 +623,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec6ac985018647f30800000000000000
-      internalID: 4572393941103322830
+      spriteID: 3ef3e5323605b8650800000000000000
+      internalID: 6236166495749947363
       vertices: []
       indices: 
       edges: []
@@ -572,8 +644,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 137926e3ed0e9af70800000000000000
-      internalID: 9199130959014958897
+      spriteID: e71670405398e9100800000000000000
+      internalID: 116681501152076158
       vertices: []
       indices: 
       edges: []
@@ -593,35 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292ffedeb7d15d6f0800000000000000
-      internalID: -660589352229801326
+      spriteID: b34d8884139b2e4a0800000000000000
+      internalID: -6565481685431299013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Desertset_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4043e2f7af6f786e0800000000000000
-      internalID: -1835226767394196476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desertset_21
       rect:
         serializedVersion: 2
         x: 512
@@ -635,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a60e9ac18b568b9b0800000000000000
-      internalID: -5064185939548839830
+      spriteID: f20446ebded8af290800000000000000
+      internalID: -7855810547753402321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Desertset_22
+      name: Desertset_21
       rect:
         serializedVersion: 2
         x: 1024
@@ -656,35 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2734bf39be16bb570800000000000000
-      internalID: 8483481987510387570
+      spriteID: 5b8ac6dddb7c214e0800000000000000
+      internalID: -2012326465203558219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Desertset_23
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71b45aeedfa2c35c0800000000000000
-      internalID: -4234462279516206313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desertset_24
+      name: Desertset_22
       rect:
         serializedVersion: 2
         x: 2048
@@ -698,35 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 590bd5a035a537eb0800000000000000
-      internalID: -4723332271478820715
+      spriteID: 7dfccd151dc85f280800000000000000
+      internalID: -9010140648835330089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Desertset_25
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cec1402881979ac50800000000000000
-      internalID: 6677001068720954604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Desertset_26
+      name: Desertset_23
       rect:
         serializedVersion: 2
         x: 3072
@@ -740,8 +749,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdae434dc87f3d0b0800000000000000
-      internalID: -5704944118720566565
+      spriteID: 9467f099a12c63c30800000000000000
+      internalID: 4338868710510917193
       vertices: []
       indices: 
       edges: []
