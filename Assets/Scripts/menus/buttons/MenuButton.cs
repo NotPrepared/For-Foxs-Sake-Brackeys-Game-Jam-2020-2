@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -16,6 +17,8 @@ public class MenuButton : MonoBehaviour
     [FormerlySerializedAs("onClickEvent")] [SerializeField]
     public Button.ButtonClickedEvent onClick;
 
+    public bool isDisabled;
+
     private static readonly int Pressed = Animator.StringToHash("pressed");
     private static readonly int Selected = Animator.StringToHash("selected");
 
@@ -26,7 +29,11 @@ public class MenuButton : MonoBehaviour
         enterEvent.callback.AddListener(_ => menuButtonController.index = thisIndex);
 
         var clickEvent = new EventTrigger.Entry {eventID = EventTriggerType.PointerClick};
-        clickEvent.callback.AddListener(_ => animator.SetBool(Pressed, true));
+        clickEvent.callback.AddListener(_ =>
+        {
+            if (isDisabled) return;
+            animator.SetBool(Pressed, true);
+        });
         
         eventTrigger.triggers.Add(enterEvent);
         eventTrigger.triggers.Add(clickEvent);
@@ -35,10 +42,12 @@ public class MenuButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDisabled) GetComponentInChildren<TextMeshProUGUI>().color = Color.gray;
         if(menuButtonController.index == thisIndex)
         {
             animator.SetBool (Selected, true);
             if(Input.GetAxisRaw("Submit") == 1){
+                if (isDisabled) return;
                 animator.SetBool (Pressed, true);
             }else if (animator.GetBool (Pressed)){
                 animator.SetBool (Pressed, false);

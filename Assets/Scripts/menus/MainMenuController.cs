@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,8 @@ using UnityEngine.UI;
 // ReSharper disable once CheckNamespace
 public class MainMenuController : MonoBehaviour
 {
-    public MenuButtonController menuButtonController;
+    public MenuButtonController mainMenuBtnController;
+    public MenuButtonController levelSelectionBtnController;
     
     public MenuButton newGameORResetBtn;
     public TMP_Text newGameORResetBtnLabel;
@@ -15,30 +17,49 @@ public class MainMenuController : MonoBehaviour
 
     public MenuButton sandboxBtn;
     public MenuButton quitBtn;
-    
+
+    public static bool isLevelSelection;
+
+    [SerializeField] private GameObject main_menu;
+    [SerializeField] private GameObject level_selection;
+    [SerializeField] private List<LevelButtonPair> levelSelectButtons;
+
+    [Serializable]
+    public class LevelButtonPair
+    {
+        public MenuButton btn;
+        public int level;
+    }
+
+
+    private void Awake()
+    {
+        if (levelSelectButtons == null) levelSelectButtons = new List<LevelButtonPair>();
+    }
+
     private static void openLevel(string sceneName) => SceneManager.LoadScene(sceneName);
     
     /// <summary>
     /// Resets progress and starts a new game
     /// </summary>
-    private static void newGame() {
+    private void newGame()
+    {
         PersistenceHandler.resetGameProgress();
-        PersistenceHandler.startGame();
-        // If it does not launch immediately invoke updateUI() 
+        switchBetweenMainAndLevelSelect(true);
     }
 
     /// <summary>
     /// Continues a active game at last scene
     /// </summary>
-    private static void continueGame()
+    private void continueGame()
     {
-        PersistenceHandler.continueGame();
+       switchBetweenMainAndLevelSelect(true);
     }
 
     /// <summary>
     /// Prepares and launches Sandbox Scene
     /// </summary>
-    private static void openSandbox()
+    private void openSandbox()
     {
         openLevel(GameScenes.SANDBOX);
     }
@@ -49,9 +70,32 @@ public class MainMenuController : MonoBehaviour
         sandboxBtn.onClick.AddListener(openSandbox);
         quitBtn.onClick.AddListener(Application.Quit);
         updateUI();
+        
+        switchBetweenMainAndLevelSelect(isLevelSelection);
     }
 
     private void updateUI() {
+        if (isLevelSelection)
+        {
+            var clearedLevel = PersistenceHandler.continueGame();
+            levelSelectButtons.ForEach(pair =>
+            {
+                if (pair.level <= clearedLevel + 1)
+                {
+                    pair.btn.onClick.AddListener(() => openLevel(GameScenes.LEVELS[pair.level]));
+                    pair.btn.isDisabled = false;
+                    pair.btn.gameObject.GetComponent<CheckedMarker>().updateCheckedState(pair.level <= clearedLevel);
+                }
+                else
+                {
+                    pair.btn.isDisabled = true;
+                    pair.btn.gameObject.GetComponent<CheckedMarker>().updateCheckedState(false);
+                }
+            });
+            levelSelectionBtnController.index = clearedLevel + 1;
+            return;
+        }
+
         // Check if an active Game exists
         if (PersistenceHandler.hasActiveGame())
         {
@@ -60,8 +104,8 @@ public class MainMenuController : MonoBehaviour
             sandboxBtn.thisIndex = 2;
             quitBtn.thisIndex = 3;
             
-            menuButtonController.index = 0;
-            menuButtonController.maxIndex = 3;
+            mainMenuBtnController.index = 0;
+            mainMenuBtnController.maxIndex = 3;
             
             newGameORResetBtnLabel.text = "Reset Game";
             continueBtn.gameObject.SetActive(true);
@@ -73,11 +117,28 @@ public class MainMenuController : MonoBehaviour
             newGameORResetBtn.thisIndex = 0;
             sandboxBtn.thisIndex = 1;
             quitBtn.thisIndex = 2;
-            menuButtonController.index = 0;
-            menuButtonController.maxIndex = 2;
+            mainMenuBtnController.index = 0;
+            mainMenuBtnController.maxIndex = 2;
             newGameORResetBtnLabel.text = "New Game";
             continueBtn.gameObject.SetActive(false);
             continueBtn.onClick.RemoveAllListeners();
+        }
+    }
+
+    public void switchBetweenMainAndLevelSelect(bool toLevel)
+    {
+        isLevelSelection = toLevel;
+        if (isLevelSelection)
+        {
+            main_menu.SetActive(false);
+            level_selection.SetActive(true);
+            updateUI();
+        }
+        else
+        {
+            main_menu.SetActive(true);
+            level_selection.SetActive(false);
+            updateUI();
         }
     }
 }

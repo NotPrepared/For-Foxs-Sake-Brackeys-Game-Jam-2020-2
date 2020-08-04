@@ -7,26 +7,36 @@ public static class PersistenceHandler
     private const string KEY_VOLUME_BASE = "basevolue";
     private const string KEY_VOLUME_MUSIC = "musicvolue";
     private const string KEY_VOLUME_MUTED = "volmuted";
+    
+    private const string KEY_LEVEL_CLEARED = "levelcleared";
 
-    public static void resetGameProgress()
-    {
-        TODO.asLogWarning("Reset Game Not Implemented");
-    }
-
-    public static void startGame()
-    {
-        TODO.asLogWarning("Start Game Not Implemented");
-    }
+    public static void resetGameProgress() => saveClearedLevel(-1);
+    public static void saveClearedLevel(int level) => PlayerPrefs.SetInt(KEY_LEVEL_CLEARED, level);
 
     public static bool hasActiveGame()
     {
-        TODO.asLogWarning("Logic for acquiring active game not implemented");
-        return true;
+        if (PlayerPrefs.HasKey(KEY_LEVEL_CLEARED))
+        {
+            return PlayerPrefs.GetInt(KEY_LEVEL_CLEARED) > -1;
+        }
+        else
+        {
+            resetGameProgress();
+            return false;
+        }
     }
 
-    public static void continueGame()
+    public static int continueGame()
     {
-        TODO.asLogWarning("Continue Game Not Implemented");
+        if (PlayerPrefs.HasKey(KEY_LEVEL_CLEARED))
+        {
+            return PlayerPrefs.GetInt(KEY_LEVEL_CLEARED);
+        }
+        else
+        {
+            resetGameProgress();
+            return -1;
+        }
     }
 
     public static float getBaseVolume(float defaultVolume) => PlayerPrefs.HasKey(KEY_VOLUME_BASE)

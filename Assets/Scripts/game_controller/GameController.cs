@@ -196,4 +196,12 @@ public class GameController : MonoBehaviour, GroundProvider
 
 
     public LayerMask getGroundLayer() => isPresent ? presentLayerMask : pastLayerMask;
+
+    public void completedLevel()
+    {
+        ignoreTimerOver = true;
+        PersistenceHandler.saveClearedLevel(GameScenes.LEVELS.IndexOf(SceneManager.GetActiveScene().name));
+        MainMenuController.isLevelSelection = true;
+        SceneManager.LoadScene(GameScenes.MAIN_MENU);
+    }
 }
