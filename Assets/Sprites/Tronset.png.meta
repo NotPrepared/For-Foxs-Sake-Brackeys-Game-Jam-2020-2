@@ -65,111 +65,6 @@ TextureImporter:
   - first:
       213: -7713450258173766611
     second: Tronset_20
-  - first:
-      213: -2859972056485909203
-    second: Tronset_21
-  - first:
-      213: 7686369914567768926
-    second: Tronset_22
-  - first:
-      213: 5214764703935652514
-    second: Tronset_23
-  - first:
-      213: -2633415357637612983
-    second: Tronset_24
-  - first:
-      213: 4304133020164430056
-    second: Tronset_25
-  - first:
-      213: -7406298064026379256
-    second: Tronset_26
-  - first:
-      213: -2393737283000595017
-    second: Tronset_27
-  - first:
-      213: -4027012475300040896
-    second: Tronset_0
-  - first:
-      213: 111729370627081266
-    second: Tronset_1
-  - first:
-      213: 5460356974769470076
-    second: Tronset_2
-  - first:
-      213: 7147204131424072257
-    second: Tronset_3
-  - first:
-      213: -7025476935232456757
-    second: Tronset_4
-  - first:
-      213: -49974443158660787
-    second: Tronset_5
-  - first:
-      213: 1684399351215939451
-    second: Tronset_6
-  - first:
-      213: -8641313092953716781
-    second: Tronset_7
-  - first:
-      213: -2691809381463478697
-    second: Tronset_8
-  - first:
-      213: 5344562349349782764
-    second: Tronset_9
-  - first:
-      213: -5000105779979405779
-    second: Tronset_10
-  - first:
-      213: 10238813781791866
-    second: Tronset_11
-  - first:
-      213: 4312095641365984788
-    second: Tronset_12
-  - first:
-      213: -8468417343851217834
-    second: Tronset_13
-  - first:
-      213: 3020177841023582804
-    second: Tronset_14
-  - first:
-      213: -9027959274353844514
-    second: Tronset_15
-  - first:
-      213: -465829924638266768
-    second: Tronset_16
-  - first:
-      213: -2221076803897821133
-    second: Tronset_17
-  - first:
-      213: 5361457969257478947
-    second: Tronset_18
-  - first:
-      213: 4946857880411889941
-    second: Tronset_19
-  - first:
-      213: 515428772747033603
-    second: Tronset_20
-  - first:
-      213: 8992542218323190842
-    second: Tronset_21
-  - first:
-      213: 8799206982518964365
-    second: Tronset_22
-  - first:
-      213: -8254655889050679823
-    second: Tronset_23
-  - first:
-      213: 1832162955839715148
-    second: Tronset_24
-  - first:
-      213: -3998672070494695418
-    second: Tronset_25
-  - first:
-      213: 3418223074011863689
-    second: Tronset_26
-  - first:
-      213: 8676510182119996132
-    second: Tronset_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -209,8 +104,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 4
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 512
@@ -229,7 +124,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -241,7 +136,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -253,7 +148,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -271,7 +166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -281,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04facaf5d7d2d18c0800000000000000
-      internalID: -4027012475300040896
+      spriteID: ae8af9805b5945cf0800000000000000
+      internalID: -264421873341716246
       vertices: []
       indices: 
       edges: []
@@ -292,7 +187,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -302,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23484374541fc8100800000000000000
-      internalID: 111729370627081266
+      spriteID: c8e1e5ecb9d359f00800000000000000
+      internalID: 1122871421490306700
       vertices: []
       indices: 
       edges: []
@@ -313,7 +208,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -323,8 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7af5f30db517cb40800000000000000
-      internalID: 5460356974769470076
+      spriteID: a674c03ab655883f0800000000000000
+      internalID: -898374204875061398
       vertices: []
       indices: 
       edges: []
@@ -334,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -344,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1427cbe3a48ff2360800000000000000
-      internalID: 7147204131424072257
+      spriteID: 1bf8aaaa903f85330800000000000000
+      internalID: 3699974316728422321
       vertices: []
       indices: 
       edges: []
@@ -355,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -365,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7f4c133fd708e90800000000000000
-      internalID: -7025476935232456757
+      spriteID: c233d9b14b7fcfdb0800000000000000
+      internalID: -4756654753480625364
       vertices: []
       indices: 
       edges: []
@@ -376,7 +271,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2560
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -386,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d491eab32847e4ff0800000000000000
-      internalID: -49974443158660787
+      spriteID: 6b6fcd198c1366ec0800000000000000
+      internalID: -3574114516761512266
       vertices: []
       indices: 
       edges: []
@@ -397,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3072
-        y: 1648
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -407,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7fdf1d1940306710800000000000000
-      internalID: 1684399351215939451
+      spriteID: d7632464316edea10800000000000000
+      internalID: 1940459984924063357
       vertices: []
       indices: 
       edges: []
@@ -418,7 +313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -428,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d7cf8d8683e31880800000000000000
-      internalID: -8641313092953716781
+      spriteID: e26c291de53f668c0800000000000000
+      internalID: -4006247229930944978
       vertices: []
       indices: 
       edges: []
@@ -439,7 +334,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -449,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75e2ece11a5c4aad0800000000000000
-      internalID: -2691809381463478697
+      spriteID: e8c4e8aeede0aab30800000000000000
+      internalID: 4299265144859282574
       vertices: []
       indices: 
       edges: []
@@ -460,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -470,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce4cbe8d323bb2a40800000000000000
-      internalID: 5344562349349782764
+      spriteID: 344676ad1c7008560800000000000000
+      internalID: 7313854324023977027
       vertices: []
       indices: 
       edges: []
@@ -481,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -491,8 +386,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2633f8e84e0c9ab0800000000000000
-      internalID: -5000105779979405779
+      spriteID: e644ee28ad5f9e990800000000000000
+      internalID: -7356078197484665746
       vertices: []
       indices: 
       edges: []
@@ -502,7 +397,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -512,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a74926a9520642000800000000000000
-      internalID: 10238813781791866
+      spriteID: 1211ecbecde053780800000000000000
+      internalID: -8704034362811870943
       vertices: []
       indices: 
       edges: []
@@ -523,7 +418,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2560
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -533,8 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 416312da324a7db30800000000000000
-      internalID: 4312095641365984788
+      spriteID: d94aa1f7f10195d90800000000000000
+      internalID: -7108632809365134179
       vertices: []
       indices: 
       edges: []
@@ -544,7 +439,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3072
-        y: 1136
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -554,8 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65cbdf91b432a7a80800000000000000
-      internalID: -8468417343851217834
+      spriteID: 6f4392e6c8e1af3d0800000000000000
+      internalID: -3172189399036644106
       vertices: []
       indices: 
       edges: []
@@ -565,7 +460,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -575,8 +470,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45287bcaeb3d9e920800000000000000
-      internalID: 3020177841023582804
+      spriteID: 013981dd8fe959920800000000000000
+      internalID: 2996475918783386384
       vertices: []
       indices: 
       edges: []
@@ -586,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -596,8 +491,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ede12754fde36b280800000000000000
-      internalID: -9027959274353844514
+      spriteID: aa1e87905f9b73bd0800000000000000
+      internalID: -2650445393607204438
       vertices: []
       indices: 
       edges: []
@@ -607,7 +502,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -617,8 +512,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a6030d62a0989f0800000000000000
-      internalID: -465829924638266768
+      spriteID: e395f5f47d37bf980800000000000000
+      internalID: -8504076102772238018
       vertices: []
       indices: 
       edges: []
@@ -628,7 +523,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -638,8 +533,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3387fc42a662d21e0800000000000000
-      internalID: -2221076803897821133
+      spriteID: ed943b84c6f9133b0800000000000000
+      internalID: -5534467179636635170
       vertices: []
       indices: 
       edges: []
@@ -649,7 +544,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -659,8 +554,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b77c7ed99b76a40800000000000000
-      internalID: 5361457969257478947
+      spriteID: e9ffc8b68dc559000800000000000000
+      internalID: 42041856116981662
       vertices: []
       indices: 
       edges: []
@@ -670,7 +565,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2560
-        y: 624
+        y: 0
         width: 512
         height: 512
       alignment: 0
@@ -680,176 +575,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511ea4c5805c6a440800000000000000
-      internalID: 4946857880411889941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_20
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 624
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30c3a9aecbb272700800000000000000
-      internalID: 515428772747033603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_21
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a346bd6c08debcc70800000000000000
-      internalID: 8992542218323190842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_22
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d800e2261201d1a70800000000000000
-      internalID: 8799206982518964365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_23
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f54c063432917d80800000000000000
-      internalID: -8254655889050679823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_24
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c47b47940862d6910800000000000000
-      internalID: 1832162955839715148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_25
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60053e010fcd188c0800000000000000
-      internalID: -3998672070494695418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_26
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98a558976c7ff6f20800000000000000
-      internalID: 3418223074011863689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tronset_27
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ea725f5a08296870800000000000000
-      internalID: 8676510182119996132
+      spriteID: 26eec6eeca80c9470800000000000000
+      internalID: 8402600543594016354
       vertices: []
       indices: 
       edges: []

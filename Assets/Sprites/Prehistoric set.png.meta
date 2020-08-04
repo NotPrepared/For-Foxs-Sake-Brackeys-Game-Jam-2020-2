@@ -77,6 +77,66 @@ TextureImporter:
   - first:
       213: -7130190670218002894
     second: Prehistoric set_24
+  - first:
+      213: 3435721092725551323
+    second: Prehistoric set_0
+  - first:
+      213: 3423370802302393577
+    second: Prehistoric set_1
+  - first:
+      213: -9194284311567662040
+    second: Prehistoric set_2
+  - first:
+      213: -4934808365577405224
+    second: Prehistoric set_3
+  - first:
+      213: -2753607779229620948
+    second: Prehistoric set_4
+  - first:
+      213: 1820828018798072419
+    second: Prehistoric set_5
+  - first:
+      213: 5232857159898709395
+    second: Prehistoric set_6
+  - first:
+      213: 924772887091840691
+    second: Prehistoric set_7
+  - first:
+      213: -5837698065904917514
+    second: Prehistoric set_8
+  - first:
+      213: -8817332176710614514
+    second: Prehistoric set_9
+  - first:
+      213: 8352362791406081594
+    second: Prehistoric set_10
+  - first:
+      213: 4274404157174494784
+    second: Prehistoric set_11
+  - first:
+      213: -6635243034063355849
+    second: Prehistoric set_12
+  - first:
+      213: -7534107899176873834
+    second: Prehistoric set_13
+  - first:
+      213: -2947636845990022538
+    second: Prehistoric set_14
+  - first:
+      213: 7281472881470874729
+    second: Prehistoric set_15
+  - first:
+      213: 5992705320636606049
+    second: Prehistoric set_16
+  - first:
+      213: 1431368354130947150
+    second: Prehistoric set_17
+  - first:
+      213: -4219446308059493587
+    second: Prehistoric set_18
+  - first:
+      213: 1770044809819813774
+    second: Prehistoric set_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +176,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 4
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -136,7 +196,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -148,7 +208,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -160,7 +220,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -188,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f32d51233fc1d50800000000000000
-      internalID: 6709504941315211147
+      spriteID: bd0393f61222eaf20800000000000000
+      internalID: 3435721092725551323
       vertices: []
       indices: 
       edges: []
@@ -209,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef940db5901357850800000000000000
-      internalID: 6374054763877648894
+      spriteID: 9ec9dad5b91428f20800000000000000
+      internalID: 3423370802302393577
       vertices: []
       indices: 
       edges: []
@@ -230,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 299aaf5789efd5be0800000000000000
-      internalID: -1486752371194549870
+      spriteID: 824001dc127576080800000000000000
+      internalID: -9194284311567662040
       vertices: []
       indices: 
       edges: []
@@ -251,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93452e19578176280800000000000000
-      internalID: -9050238032939953095
+      spriteID: 8dcf12fefe9048bb0800000000000000
+      internalID: -4934808365577405224
       vertices: []
       indices: 
       edges: []
@@ -272,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6827e0295e5d7f3f0800000000000000
-      internalID: -866989221270883706
+      spriteID: c252444605839c9d0800000000000000
+      internalID: -2753607779229620948
       vertices: []
       indices: 
       edges: []
@@ -293,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1810f64d69c2e8290800000000000000
-      internalID: -7886316871158398591
+      spriteID: 36299899f61e44910800000000000000
+      internalID: 1820828018798072419
       vertices: []
       indices: 
       edges: []
@@ -314,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c43c4305d037a60800000000000000
-      internalID: 7670489228475845742
+      spriteID: 39d3f10bcd7de9840800000000000000
+      internalID: 5232857159898709395
       vertices: []
       indices: 
       edges: []
@@ -335,8 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 177dd0ede13f52ad0800000000000000
-      internalID: -2727506685402949775
+      spriteID: 3b685098a0475dc00800000000000000
+      internalID: 924772887091840691
       vertices: []
       indices: 
       edges: []
@@ -356,8 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7bfc0fbc9e3da00800000000000000
-      internalID: 780224222593005525
+      spriteID: 6f3a0cbd9845cfea0800000000000000
+      internalID: -5837698065904917514
       vertices: []
       indices: 
       edges: []
@@ -377,8 +437,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2511f346a3aae7f60800000000000000
-      internalID: 8034045953042223442
+      spriteID: e02ca8cf91b82a580800000000000000
+      internalID: -8817332176710614514
       vertices: []
       indices: 
       edges: []
@@ -398,8 +458,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0164c13f2db3c0930800000000000000
-      internalID: 4110726337090307600
+      spriteID: a3613f0c4bd89e370800000000000000
+      internalID: 8352362791406081594
       vertices: []
       indices: 
       edges: []
@@ -419,35 +479,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13dc669da3ddaa440800000000000000
-      internalID: 4948010385445145905
+      spriteID: 046b6d62febb15b30800000000000000
+      internalID: 4274404157174494784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Prehistoric set_12
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 1136
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42fb34a0e4e0e70e0800000000000000
-      internalID: -2270361433805701340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_13
       rect:
         serializedVersion: 2
         x: 0
@@ -461,14 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3294a5a343dd6cb80800000000000000
-      internalID: -8374763240661825245
+      spriteID: 730c4449d91eae3a0800000000000000
+      internalID: -6635243034063355849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prehistoric set_14
+      name: Prehistoric set_13
       rect:
         serializedVersion: 2
         x: 512
@@ -482,14 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2148888d4191764a0800000000000000
-      internalID: -6600279151565306862
+      spriteID: 690191a78c8717790800000000000000
+      internalID: -7534107899176873834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prehistoric set_15
+      name: Prehistoric set_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -503,14 +542,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57180411e20b7a5c0800000000000000
-      internalID: -4204198015222644363
+      spriteID: 67279e3e7e3e717d0800000000000000
+      internalID: -2947636845990022538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Prehistoric set_16
+      name: Prehistoric set_15
       rect:
         serializedVersion: 2
         x: 1536
@@ -524,8 +563,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c319ab78213f729c0800000000000000
-      internalID: -3951922887082208964
+      spriteID: 96426bdb10dfc0560800000000000000
+      internalID: 7281472881470874729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16663280dbd5a2350800000000000000
+      internalID: 5992705320636606049
       vertices: []
       indices: 
       edges: []
@@ -534,7 +594,7 @@ TextureImporter:
       name: Prehistoric set_17
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 3072
         y: 624
         width: 512
         height: 512
@@ -545,8 +605,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42d8ec7117f6b3950800000000000000
-      internalID: 6429855424522915108
+      spriteID: e4ce5b23fed3dd310800000000000000
+      internalID: 1431368354130947150
       vertices: []
       indices: 
       edges: []
@@ -555,8 +615,8 @@ TextureImporter:
       name: Prehistoric set_18
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 624
+        x: 1536
+        y: 112
         width: 512
         height: 512
       alignment: 0
@@ -566,77 +626,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fd78dbc95ae799a0800000000000000
-      internalID: -6226250288423469583
+      spriteID: d2bc74b30f38175c0800000000000000
+      internalID: -4219446308059493587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Prehistoric set_19
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 624
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d64e5b01e579d450800000000000000
-      internalID: 6114047578550978258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5de93e620b318cdb0800000000000000
-      internalID: -4771542157911417131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_21
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e5a6e27b351c7b30800000000000000
-      internalID: 4286324290424841698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_22
       rect:
         serializedVersion: 2
         x: 2048
@@ -650,50 +647,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c40d344b6c75bd50800000000000000
-      internalID: 6752440016460121288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_23
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d6591a99b50a3960800000000000000
-      internalID: 7582379217344091856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prehistoric set_24
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 112
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23ef9d0ec597c0d90800000000000000
-      internalID: -7130190670218002894
+      spriteID: e8775dd5066709810800000000000000
+      internalID: 1770044809819813774
       vertices: []
       indices: 
       edges: []
