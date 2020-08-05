@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 
 public class ColorChangeActivatable : MonoBehaviour
@@ -9,7 +10,7 @@ public class ColorChangeActivatable : MonoBehaviour
     [SerializeField]
     private Color activated;
     [SerializeField]
-    private Activator activator;
+    private ActivatorBase activator;
 
     private SpriteRenderer spriteRender;
 
