@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: d39036e75f503734db490a50c16533c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6709504941315211147
+    second: Prehistoric set_0
+  - first:
+      213: 6374054763877648894
+    second: Prehistoric set_1
+  - first:
+      213: -1486752371194549870
+    second: Prehistoric set_2
+  - first:
+      213: -9050238032939953095
+    second: Prehistoric set_3
+  - first:
+      213: -866989221270883706
+    second: Prehistoric set_4
+  - first:
+      213: -7886316871158398591
+    second: Prehistoric set_5
+  - first:
+      213: 7670489228475845742
+    second: Prehistoric set_6
+  - first:
+      213: -2727506685402949775
+    second: Prehistoric set_7
+  - first:
+      213: 780224222593005525
+    second: Prehistoric set_8
+  - first:
+      213: 8034045953042223442
+    second: Prehistoric set_9
+  - first:
+      213: 4110726337090307600
+    second: Prehistoric set_10
+  - first:
+      213: 4948010385445145905
+    second: Prehistoric set_11
+  - first:
+      213: -2270361433805701340
+    second: Prehistoric set_12
+  - first:
+      213: -8374763240661825245
+    second: Prehistoric set_13
+  - first:
+      213: -6600279151565306862
+    second: Prehistoric set_14
+  - first:
+      213: -4204198015222644363
+    second: Prehistoric set_15
+  - first:
+      213: -3951922887082208964
+    second: Prehistoric set_16
+  - first:
+      213: 6429855424522915108
+    second: Prehistoric set_17
+  - first:
+      213: -6226250288423469583
+    second: Prehistoric set_18
+  - first:
+      213: 6114047578550978258
+    second: Prehistoric set_19
+  - first:
+      213: -4771542157911417131
+    second: Prehistoric set_20
+  - first:
+      213: 4286324290424841698
+    second: Prehistoric set_21
+  - first:
+      213: 6752440016460121288
+    second: Prehistoric set_22
+  - first:
+      213: 7582379217344091856
+    second: Prehistoric set_23
+  - first:
+      213: -7130190670218002894
+    second: Prehistoric set_24
+  - first:
+      213: 3435721092725551323
+    second: Prehistoric set_0
+  - first:
+      213: 3423370802302393577
+    second: Prehistoric set_1
+  - first:
+      213: -9194284311567662040
+    second: Prehistoric set_2
+  - first:
+      213: -4934808365577405224
+    second: Prehistoric set_3
+  - first:
+      213: -2753607779229620948
+    second: Prehistoric set_4
+  - first:
+      213: 1820828018798072419
+    second: Prehistoric set_5
+  - first:
+      213: 5232857159898709395
+    second: Prehistoric set_6
+  - first:
+      213: 924772887091840691
+    second: Prehistoric set_7
+  - first:
+      213: -5837698065904917514
+    second: Prehistoric set_8
+  - first:
+      213: -8817332176710614514
+    second: Prehistoric set_9
+  - first:
+      213: 8352362791406081594
+    second: Prehistoric set_10
+  - first:
+      213: 4274404157174494784
+    second: Prehistoric set_11
+  - first:
+      213: -6635243034063355849
+    second: Prehistoric set_12
+  - first:
+      213: -7534107899176873834
+    second: Prehistoric set_13
+  - first:
+      213: -2947636845990022538
+    second: Prehistoric set_14
+  - first:
+      213: 7281472881470874729
+    second: Prehistoric set_15
+  - first:
+      213: 5992705320636606049
+    second: Prehistoric set_16
+  - first:
+      213: 1431368354130947150
+    second: Prehistoric set_17
+  - first:
+      213: -4219446308059493587
+    second: Prehistoric set_18
+  - first:
+      213: 1770044809819813774
+    second: Prehistoric set_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Prehistoric set_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0393f61222eaf20800000000000000
+      internalID: 3435721092725551323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec9dad5b91428f20800000000000000
+      internalID: 3423370802302393577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824001dc127576080800000000000000
+      internalID: -9194284311567662040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcf12fefe9048bb0800000000000000
+      internalID: -4934808365577405224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c252444605839c9d0800000000000000
+      internalID: -2753607779229620948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36299899f61e44910800000000000000
+      internalID: 1820828018798072419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d3f10bcd7de9840800000000000000
+      internalID: 5232857159898709395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b685098a0475dc00800000000000000
+      internalID: 924772887091840691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3a0cbd9845cfea0800000000000000
+      internalID: -5837698065904917514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02ca8cf91b82a580800000000000000
+      internalID: -8817332176710614514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3613f0c4bd89e370800000000000000
+      internalID: 8352362791406081594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046b6d62febb15b30800000000000000
+      internalID: 4274404157174494784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730c4449d91eae3a0800000000000000
+      internalID: -6635243034063355849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690191a78c8717790800000000000000
+      internalID: -7534107899176873834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67279e3e7e3e717d0800000000000000
+      internalID: -2947636845990022538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96426bdb10dfc0560800000000000000
+      internalID: 7281472881470874729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16663280dbd5a2350800000000000000
+      internalID: 5992705320636606049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_17
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce5b23fed3dd310800000000000000
+      internalID: 1431368354130947150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bc74b30f38175c0800000000000000
+      internalID: -4219446308059493587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prehistoric set_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 112
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8775dd5066709810800000000000000
+      internalID: 1770044809819813774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

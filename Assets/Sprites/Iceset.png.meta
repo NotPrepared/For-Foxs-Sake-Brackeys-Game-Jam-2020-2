@@ -1,0 +1,629 @@
+fileFormatVersion: 2
+guid: 8ec80709f4d16b94e9b3923bc289bd94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1811414615106334479
+    second: Iceset_0
+  - first:
+      213: -658985215946244585
+    second: Iceset_1
+  - first:
+      213: -3978704949804258938
+    second: Iceset_2
+  - first:
+      213: 8296143901360765555
+    second: Iceset_3
+  - first:
+      213: 1658927010831733147
+    second: Iceset_4
+  - first:
+      213: -5121650906418900464
+    second: Iceset_5
+  - first:
+      213: 7719055263252487067
+    second: Iceset_6
+  - first:
+      213: -960243230208539355
+    second: Iceset_7
+  - first:
+      213: -839591371441382361
+    second: Iceset_8
+  - first:
+      213: -1608203380883610310
+    second: Iceset_9
+  - first:
+      213: -5387859440496916009
+    second: Iceset_10
+  - first:
+      213: 9026404165367649933
+    second: Iceset_11
+  - first:
+      213: 987025749744096822
+    second: Iceset_12
+  - first:
+      213: -7821733195855889770
+    second: Iceset_13
+  - first:
+      213: -3175322646459383881
+    second: Iceset_14
+  - first:
+      213: 3360971435150615157
+    second: Iceset_15
+  - first:
+      213: -1287570983617156655
+    second: Iceset_16
+  - first:
+      213: -800546904736178895
+    second: Iceset_17
+  - first:
+      213: 9198232027880655253
+    second: Iceset_18
+  - first:
+      213: 5671434554348776072
+    second: Iceset_19
+  - first:
+      213: 5237668707623748296
+    second: Iceset_20
+  - first:
+      213: 1905112295254433148
+    second: Iceset_21
+  - first:
+      213: -494843194069083285
+    second: Iceset_22
+  - first:
+      213: -8873782384650769572
+    second: Iceset_23
+  - first:
+      213: -6615045873336869701
+    second: Iceset_24
+  - first:
+      213: -8663940733065475080
+    second: Iceset_25
+  - first:
+      213: -975542631291039169
+    second: Iceset_26
+  - first:
+      213: -8044813971909607374
+    second: Iceset_0
+  - first:
+      213: 1506731554718829009
+    second: Iceset_1
+  - first:
+      213: -6327876022491519829
+    second: Iceset_2
+  - first:
+      213: -8080962481386240613
+    second: Iceset_3
+  - first:
+      213: -2625243593017646854
+    second: Iceset_4
+  - first:
+      213: -7181679243924372977
+    second: Iceset_5
+  - first:
+      213: 3491759724329127783
+    second: Iceset_6
+  - first:
+      213: -7565438172082665100
+    second: Iceset_7
+  - first:
+      213: -5476943002084176930
+    second: Iceset_8
+  - first:
+      213: -4946950437697582098
+    second: Iceset_9
+  - first:
+      213: -8296232519459909366
+    second: Iceset_10
+  - first:
+      213: -3552703724198180919
+    second: Iceset_11
+  - first:
+      213: 3077337147261228343
+    second: Iceset_12
+  - first:
+      213: -2148179177404080717
+    second: Iceset_13
+  - first:
+      213: -4752539756542839878
+    second: Iceset_14
+  - first:
+      213: -2519842995048937409
+    second: Iceset_15
+  - first:
+      213: 5086030917289263564
+    second: Iceset_16
+  - first:
+      213: 5475420012274682486
+    second: Iceset_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Iceset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2308a38d0541b5090800000000000000
+      internalID: -8044813971909607374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d943e2bd5cf8e410800000000000000
+      internalID: 1506731554718829009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba46ea8b84ede28a0800000000000000
+      internalID: -6327876022491519829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95c6bd1077aadf80800000000000000
+      internalID: -8080962481386240613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0205d7cd2419bd0800000000000000
+      internalID: -2625243593017646854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1648
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02871f17cc855c90800000000000000
+      internalID: -7181679243924372977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f47a918f8357030800000000000000
+      internalID: 3491759724329127783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47905ded01a220790800000000000000
+      internalID: -7565438172082665100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb06b19b5dfdf3b0800000000000000
+      internalID: -5476943002084176930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb829779c6e85bb0800000000000000
+      internalID: -4946950437697582098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a015c879a7cdddc80800000000000000
+      internalID: -8296232519459909366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1136
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7c5fe29c242bec0800000000000000
+      internalID: -3552703724198180919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7359e9cb4d5e4ba20800000000000000
+      internalID: 3077337147261228343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd50f07b622032e0800000000000000
+      internalID: -2148179177404080717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3b75e75469b0eb0800000000000000
+      internalID: -4752539756542839878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f380a5e8528b70dd0800000000000000
+      internalID: -2519842995048937409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc14ead1c26359640800000000000000
+      internalID: 5086030917289263564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iceset_17
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 624
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a82bbbd799cfb40800000000000000
+      internalID: 5475420012274682486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

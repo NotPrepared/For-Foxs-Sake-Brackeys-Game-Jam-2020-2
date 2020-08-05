@@ -39,15 +39,20 @@ public class TimerImpl : MonoBehaviour, ITimer
         time += timeIncrement;
     }
 
+    public PauseEvent onPause = new PauseEvent();
+    public PauseEvent onPauseAccess => onPause;
+
     public void pauseTimer()
     {
         paused = true;
+        onPause.Invoke(true);
         Time.timeScale = 0f;
     }
 
     public void resumeTimer()
     {
         paused = false;
+        onPause.Invoke(false);
         Time.timeScale = 1f;
     }
 

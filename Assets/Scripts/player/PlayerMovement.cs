@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         crouch = Input.GetKey(KeyCode.S);
         if (rewindPlayerKeyCheck())
         {
-            controller.startRewind();
+            controller.invokeRewind();
         }
     }
 
