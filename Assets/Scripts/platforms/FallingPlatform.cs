@@ -25,7 +25,7 @@ public class FallingPlatform : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hasFallTimestamp) return;
-        if (other.gameObject == fallTarget) return;
+        if (!other.CompareTag("Player")) return;
         startTimer();
     }
     
