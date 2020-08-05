@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,7 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
     [SerializeField] private float currentHealth = 100;
 
     [SerializeField] public HealthChangedEvent onHealthChange;
+    [SerializeField] private TextMeshProUGUI healthBar;
 
     private void Awake()
     {
@@ -18,6 +20,12 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
         {
             onHealthChange = new HealthChangedEvent();
         }
+    }
+
+    private void Start()
+    {
+        onHealthChange.AddListener(f => healthBar.text = $"{f:0.###}");
+        healthBar.text = $"{currentHealth:0.###}";
     }
 
 
