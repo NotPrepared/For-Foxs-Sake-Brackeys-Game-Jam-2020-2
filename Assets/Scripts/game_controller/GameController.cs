@@ -117,13 +117,12 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void handleOutOfTime()
     {
-        TODO.asLogWarning("Game End not implemented");
         handleUIStateChange(UIState.GAME_OVER);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     private void handlePlayerNoHealth()
     {
+        timer.pauseTimer();
         handleUIStateChange(UIState.GAME_OVER);
     }
 
