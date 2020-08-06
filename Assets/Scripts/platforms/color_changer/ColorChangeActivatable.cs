@@ -18,12 +18,12 @@ public class ColorChangeActivatable : MonoBehaviour
     {
         spriteRender = gameObject.GetComponent<SpriteRenderer>();
         initial = spriteRender.color;
-        // Set Listener
-        activator.onStateChange.AddListener(changeColor);
     }
 
     private void Start()
     {
+        // Set Listener
+        activator.onStateChange.AddListener(changeColor);
         changeColor(activator.getCurrent());
     }
 

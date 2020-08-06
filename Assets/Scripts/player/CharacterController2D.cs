@@ -80,7 +80,6 @@ public class CharacterController2D : MonoBehaviour, IPusher
 
     private void Awake()
     {
-        m_WhatIsGroundProvider = GameController.Instance;
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_transform = transform;
         hasCrouchDisableCollider = m_CrouchDisableCollider != null;
@@ -99,6 +98,11 @@ public class CharacterController2D : MonoBehaviour, IPusher
         }
 
         OnLandEvent.AddListener(() => { usedDoubleJump = false; });
+    }
+
+    private void Start()
+    {
+        m_WhatIsGroundProvider = GameController.Instance;
     }
 
     private void FixedUpdate()
@@ -131,7 +135,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 m_WhatIsGroundProvider.getGroundLayer());
             foreach (var col in colliders)
             {
-                if (col.gameObject != gameObject)
+                if (!col.CompareTag(GameTags.PLAYER))
                 {
                     m_Grounded = true;
                     if (!wasGrounded)

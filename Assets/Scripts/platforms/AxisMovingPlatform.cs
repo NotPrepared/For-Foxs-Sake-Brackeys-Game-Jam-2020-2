@@ -25,7 +25,13 @@ public class AxisMovingPlatform : MonoBehaviour
 
     private float maxX, minX, maxY, minY;
     private bool invertX, invertY;
-    private void Start()
+
+    public bool freezeMovement;
+    
+    [SerializeField]
+    private bool freezeAtTurnPoint;
+
+    internal void Start()
     {
         var position = transform.position;
         var positionX = position.x;
@@ -39,6 +45,7 @@ public class AxisMovingPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (freezeMovement) return;
         var position = transform.position;
         var currentPosX = position.x;
         var currentPosY = position.y;
@@ -83,6 +90,10 @@ public class AxisMovingPlatform : MonoBehaviour
             invertX = invertY = false;
             movePositiveX = !movePositiveX;
             movePositiveY = !movePositiveY;
+            if (freezeAtTurnPoint)
+            {
+                freezeMovement = true;
+            }
         }
 
         var targetPos = new Vector2(posX, posY);

@@ -20,16 +20,18 @@ public class Lever : ActivatorBase
 
         tags = new List<string>();
         input_tags.ForEach(it => tags.Add(GameTags.of(it)));
+        var spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.flipX = currentState;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.LogWarning("Collision");
         if (!isTagInList(other.tag)) return;
         if (!other.isTrigger) return;
 
-            Debug.LogWarning("Collision Matched Tags");
         currentState = !currentState;
+        var spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.flipX = currentState;
         onStateChangeBacking.Invoke(currentState);
     }
 
