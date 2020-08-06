@@ -1164,6 +1164,7 @@ GameObject:
   - component: {fileID: 2324185423895709184}
   - component: {fileID: 2324185423895709186}
   - component: {fileID: 2324185423895709185}
+  - component: {fileID: 2409773393636553731}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1309,6 +1310,53 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2409773393636553731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324185423895709191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d73b3cac10b46cf879e0359aa4e13e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  msgs:
+  - text: LOL U DEAD
+    predicateType: 0
+    comparisonInt: 0
+  - text: This was death number {death}, more will follow.
+    predicateType: 2
+    comparisonInt: 20
+  - text: Let's do the timewarp again
+    predicateType: 0
+    comparisonInt: 0
+  - text: Never gonna give up
+    predicateType: 0
+    comparisonInt: 0
+  - text: Do you have time for this kind of playstyle
+    predicateType: 3
+    comparisonInt: 15
+  - text: Time brings all things to pass
+    predicateType: 0
+    comparisonInt: 0
+  - text: Dead again ?
+    predicateType: 0
+    comparisonInt: 0
+  - text: So try again ...
+    predicateType: 0
+    comparisonInt: 0
+  msgForceAppearance:
+  - text: Oh death 69 - Nice!
+    predicateType: 1
+    comparisonInt: 69
+  - text: First of many.
+    predicateType: 1
+    comparisonInt: 1
+  - text: Enemy Pentakill
+    predicateType: 1
+    comparisonInt: 5
 --- !u!1 &2324185423911573375
 GameObject:
   m_ObjectHideFlags: 0

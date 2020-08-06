@@ -117,12 +117,14 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void handleOutOfTime()
     {
+        PersistenceHandler.incrementPlayerDeaths();
         handleUIStateChange(UIState.GAME_OVER);
     }
     
     private void handlePlayerNoHealth()
     {
         timer.pauseTimer();
+        PersistenceHandler.incrementPlayerDeaths();
         handleUIStateChange(UIState.GAME_OVER);
     }
 
@@ -185,6 +187,7 @@ public class GameController : MonoBehaviour, GroundProvider
                 break;
             case UIState.GAME_OVER:
                 applyOnList(UIState.GAME_OVER);
+                DisplayDeathMessage.Instance.displayMessage();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
@@ -199,7 +202,12 @@ public class GameController : MonoBehaviour, GroundProvider
     public void completedLevel()
     {
         ignoreTimerOver = true;
-        PersistenceHandler.saveClearedLevel(GameScenes.LEVELS.IndexOf(SceneManager.GetActiveScene().name));
+        var curLevel = GameScenes.LEVELS.IndexOf(SceneManager.GetActiveScene().name);
+        if (curLevel > PersistenceHandler.continueGame())
+        {
+            PersistenceHandler.saveClearedLevel(curLevel);
+        }
+
         MainMenuController.isLevelSelection = true;
         SceneManager.LoadScene(GameScenes.MAIN_MENU);
     }

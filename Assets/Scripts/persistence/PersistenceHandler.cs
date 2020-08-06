@@ -7,11 +7,22 @@ public static class PersistenceHandler
     private const string KEY_VOLUME_BASE = "basevolue";
     private const string KEY_VOLUME_MUSIC = "musicvolue";
     private const string KEY_VOLUME_MUTED = "volmuted";
-    
-    private const string KEY_LEVEL_CLEARED = "levelcleared";
 
-    public static void resetGameProgress() => saveClearedLevel(-1);
-    public static void saveClearedLevel(int level) => PlayerPrefs.SetInt(KEY_LEVEL_CLEARED, level);
+    private const string KEY_LEVEL_CLEARED = "levelcleared";
+    private const string KEY_TOTAL_DEATHS = "totaldeaths";
+
+    public static void resetGameProgress()
+    {
+        saveClearedLevel(-1);
+        PlayerPrefs.SetInt(KEY_TOTAL_DEATHS, 0);
+        PlayerPrefs.Save();
+    }
+
+    public static void saveClearedLevel(int level)
+    {
+        PlayerPrefs.SetInt(KEY_LEVEL_CLEARED, level);
+        PlayerPrefs.Save();
+    }
 
     public static bool hasActiveGame()
     {
@@ -36,6 +47,26 @@ public static class PersistenceHandler
         {
             resetGameProgress();
             return -1;
+        }
+    }
+
+    private static Object lockObj = new Object();
+
+    public static int getPlayerDeaths()
+    {
+        lock (lockObj)
+        {
+            return PlayerPrefs.HasKey(KEY_TOTAL_DEATHS) ? PlayerPrefs.GetInt(KEY_TOTAL_DEATHS) : 0;
+        }
+    } 
+    public static int incrementPlayerDeaths()
+    {
+        lock (lockObj)
+        {
+            var deaths = getPlayerDeaths() + 1;
+            PlayerPrefs.SetInt(KEY_TOTAL_DEATHS, deaths);
+            PlayerPrefs.Save();
+            return deaths;
         }
     }
 
