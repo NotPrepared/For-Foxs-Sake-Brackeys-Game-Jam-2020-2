@@ -68,6 +68,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls: []
+  isDisabled: 0
 --- !u!95 &1979380803972936815
 Animator:
   serializedVersion: 3
