@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -145,6 +146,14 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 }
             }
 
+            colliders = Physics2D.OverlapPointAll(m_StuckInEnvironment.position);
+            colliders.ToList().ForEach(c =>
+            {
+                if (!c.gameObject.CompareTag("Player") && !c.isTrigger)
+                {
+                    GetComponent<PlayerHealthController>().applyDamage(50 * Time.fixedDeltaTime);
+                }
+            });
             if (isRecordingRewind)
             {
                 // ReSharper disable once CompareOfFloatsByEqualityOperator
