@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour, GroundProvider
         else
         {
             // Time is over
-            handleOutOfTime();
+            if (!timer.isPaused()) handleOutOfTime();
         }
     }
 
@@ -124,6 +124,7 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void handleOutOfTime()
     {
+        timer.pauseTimer();
         PersistenceHandler.incrementPlayerDeaths();
         deathReason = DeathType.TIME;
         handleUIStateChange(UIState.GAME_OVER);
