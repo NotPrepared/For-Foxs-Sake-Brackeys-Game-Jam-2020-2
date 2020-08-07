@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8992787452084894215}
   - component: {fileID: 8992787452084894212}
   - component: {fileID: 8992787452084894217}
-  m_Layer: 10
-  m_Name: MovingPlatform
+  m_Layer: 12
+  m_Name: MovingPlatformFalling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +105,9 @@ MonoBehaviour:
   moveRangeInTilesToNegativeX: 5
   moveRangeInTilesToPositiveY: 0
   moveRangeInTilesToNegativeY: 0
+  freezeMovement: 0
+  flipSpriteAtTurnPoint: 0
+  freezeAtTurnPoint: 0
 --- !u!61 &8992787452084894217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +146,7 @@ GameObject:
   - component: {fileID: 8992787452348561713}
   - component: {fileID: 8992787452348561712}
   - component: {fileID: 8992787452348561715}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: FallingTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,6 +208,7 @@ MonoBehaviour:
   fallDelay: 2
   revokeJumpableDelay: 2
   fallTarget: {fileID: 8992787452084894213}
+  disableOnFall: []
   fallTimestamp: 0
   revokeJumpTimestamp: 0
   hasFallTimestamp: 0

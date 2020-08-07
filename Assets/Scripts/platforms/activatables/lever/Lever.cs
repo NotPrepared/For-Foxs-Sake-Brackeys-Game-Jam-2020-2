@@ -5,6 +5,12 @@ using UnityEngine;
 public class Lever : ActivatorBase
 {
     private ActivationStateChangeEvent onStateChangeBacking;
+
+    //Code by Lukas dont mind me
+    [SerializeField] private bool flipX;
+    [SerializeField] private bool flipY;
+
+    //End code Lukas
     [SerializeField] private bool currentState;
     [SerializeField] private bool inverted;
     [SerializeField] private List<GameTagsEnum> input_tags;
@@ -31,7 +37,11 @@ public class Lever : ActivatorBase
 
         currentState = !currentState;
         var spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.flipX = currentState;
+
+        //Changed Flipcode by Lukas
+        if (flipX) spriteRenderer.flipX = currentState;
+        if (flipY) spriteRenderer.flipX = currentState;
+        //endcode Lukas
         onStateChangeBacking.Invoke(currentState);
     }
 

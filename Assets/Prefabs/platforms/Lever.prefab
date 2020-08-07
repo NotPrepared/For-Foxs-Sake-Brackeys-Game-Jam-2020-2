@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52818ed7d4bf47b0bb4a0a820d92db1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipX: 1
+  flipY: 0
   currentState: 0
   inverted: 0
   input_tags: 00000000

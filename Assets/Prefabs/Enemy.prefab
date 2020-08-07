@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5282471385074613707}
   - component: {fileID: 5282471385074613708}
   - component: {fileID: 5282471385074613709}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5282471385171638037}
   - component: {fileID: 5282471385171638038}
   - component: {fileID: 5282471385171638039}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FallTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 5282471386313485761}
   - component: {fileID: 5282471386313485775}
   - component: {fileID: 5282471386313485760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DamageDeal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,8 +281,6 @@ MonoBehaviour:
   damage: 50
   repeatDealDamage: 0
   damageCooldown: 0.0001
-  damageable:
-  - {fileID: 0}
 --- !u!61 &5282471386313485760
 BoxCollider2D:
   m_ObjectHideFlags: 0
