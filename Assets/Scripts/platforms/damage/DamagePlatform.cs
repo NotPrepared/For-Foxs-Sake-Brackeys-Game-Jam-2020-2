@@ -12,14 +12,12 @@ public class DamagePlatform : MonoBehaviour
     [SerializeField] private float damageCooldown = 2f;
     private float damageCooldownTimer;
 
-    [SerializeField] private List<GameObject> damageable;
 
     private Dictionary<int, IDamageable> presentObj;
 
 
     private void Awake()
     {
-        if (damageable == null) damageable = new List<GameObject>();
         if (presentObj == null) presentObj = new Dictionary<int, IDamageable>();
         damageCooldownTimer = damageCooldown;
     }
@@ -28,10 +26,7 @@ public class DamagePlatform : MonoBehaviour
     {
         try
         {
-            var damageBehaviour = other.gameObject.GetComponent<IDamageable>();
-            var obj = damageable.Find(it => it.GetComponent<IDamageable>() == damageBehaviour);
-            if (obj == null) return;
-            var comp = obj.GetComponent<IDamageable>();
+            var comp = other.gameObject.GetComponent<IDamageable>();
             if (comp == null) return;
             if (presentObj.ContainsKey(comp.getID())) return;
             presentObj.Add(comp.getID(), comp);

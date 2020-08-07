@@ -146,6 +146,21 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 }
             }
 
+            if (!m_Grounded)
+            {
+                colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius,
+                    LayerMask.GetMask("BothLayers"));
+                foreach (var col in colliders)
+                {
+                    if (!col.CompareTag(GameTags.PLAYER))
+                    {
+                        m_Grounded = true;
+                        if (!wasGrounded)
+                            OnLandEvent.Invoke();
+                    }
+                }
+            }
+
             colliders = Physics2D.OverlapPointAll(m_StuckInEnvironment.position);
             colliders.ToList().ForEach(c =>
             {
