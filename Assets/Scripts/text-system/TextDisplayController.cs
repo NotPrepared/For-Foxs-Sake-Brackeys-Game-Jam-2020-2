@@ -14,6 +14,8 @@ public class TextDisplayController : MonoBehaviour
     private bool requireAck;
     private bool acked;
 
+    private float interactCD;
+
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class TextDisplayController : MonoBehaviour
         if (requireAck)
         {
             if (acked) return;
+            interactCD -= Time.unscaledDeltaTime;
+            if (interactCD > 0) return;
             if (Input.GetAxisRaw("Submit") == 1)
             {
                 acked = true;
@@ -55,7 +59,7 @@ public class TextDisplayController : MonoBehaviour
         {
             TimerImpl.Instance.pauseTimer();
         }
-
+        interactCD = 0.8f;
         fadeAfter = fadeTime;
         display.text = text;
         textDisplayRoot.SetActive(true);
