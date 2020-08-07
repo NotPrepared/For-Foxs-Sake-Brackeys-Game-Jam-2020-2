@@ -667,21 +667,31 @@ PrefabInstance:
       propertyPath: flipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7767808505806720696, guid: 19f863b4a7113334aad8ced1a5930fbf,
+        type: 3}
+      propertyPath: onWall
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7767808505806720697, guid: 19f863b4a7113334aad8ced1a5930fbf,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6946991223851971200, guid: 22d5df0ad9e8d2c40b2c2cc63616f2e8,
         type: 3}
+    - target: {fileID: 7767808505806720697, guid: 19f863b4a7113334aad8ced1a5930fbf,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7767808505806720699, guid: 19f863b4a7113334aad8ced1a5930fbf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.51
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 7767808505806720699, guid: 19f863b4a7113334aad8ced1a5930fbf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.5
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 7767808505806720699, guid: 19f863b4a7113334aad8ced1a5930fbf,
         type: 3}

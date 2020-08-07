@@ -7,8 +7,8 @@ public class Lever : ActivatorBase
     private ActivationStateChangeEvent onStateChangeBacking;
 
     //Code by Lukas dont mind me
-    [SerializeField] private bool flipX;
-    [SerializeField] private bool flipY;
+    [SerializeField] private bool onFloorOrCeiling;
+    [SerializeField] private bool onWall;
 
     //End code Lukas
     [SerializeField] private bool currentState;
@@ -39,8 +39,8 @@ public class Lever : ActivatorBase
         var spriteRenderer = GetComponent<SpriteRenderer>();
 
         //Changed Flipcode by Lukas
-        if (flipX) spriteRenderer.flipX = currentState;
-        if (flipY) spriteRenderer.flipX = currentState;
+        if (onFloorOrCeiling) spriteRenderer.flipX = currentState;
+        if (onWall) spriteRenderer.flipY = currentState;
         //endcode Lukas
         onStateChangeBacking.Invoke(currentState);
     }
