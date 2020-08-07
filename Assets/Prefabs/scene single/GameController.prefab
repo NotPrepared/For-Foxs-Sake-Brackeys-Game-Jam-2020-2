@@ -2106,6 +2106,7 @@ MonoBehaviour:
     subUIRoot: {fileID: 2324185422981075165}
   - activeState: 2
     subUIRoot: {fileID: 2324185424091478802}
+  playerLayerSwitchEnabledInit: 1
 --- !u!114 &2324185424791580805
 MonoBehaviour:
   m_ObjectHideFlags: 0

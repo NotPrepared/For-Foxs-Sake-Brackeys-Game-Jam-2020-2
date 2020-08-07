@@ -356,6 +356,27 @@ public class CharacterController2D : MonoBehaviour, IPusher
     {
         activePushable = null;
     }
+
+    public void enableMove(MoveTypes typeToAward)
+    {
+        switch (typeToAward)
+        {
+            case MoveTypes.SLAM:
+                slamEnabled = true;
+                break;
+            case MoveTypes.DOUBLE_JUMP:
+                doubleJumpEnabled = true;
+                break;
+            case MoveTypes.LAYER_SWITCH:
+                GameController.playerLayerSwitchEnabled = true;
+                break;
+            case MoveTypes.POS_REWIND:
+                positionRewindEnabled = true;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(typeToAward), typeToAward, null);
+        }
+    }
 }
 
 public class RewindPoint
@@ -376,4 +397,9 @@ public class RewindPoint
     {
         /* Ignored */
     }
+}
+
+public enum MoveTypes
+{
+    SLAM, DOUBLE_JUMP, LAYER_SWITCH, POS_REWIND
 }

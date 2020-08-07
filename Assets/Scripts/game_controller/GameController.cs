@@ -45,14 +45,18 @@ public class GameController : MonoBehaviour, GroundProvider
     private ITimer timer;
 
     private readonly Func<bool> pauseKeyCheck = () => Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape);
-    private readonly Func<bool> changeTimeLayerKeyCheck = () => Input.GetKeyDown(KeyCode.Q);
+    private readonly Func<bool> changeTimeLayerKeyCheck = () => playerLayerSwitchEnabled && Input.GetKeyDown(KeyCode.Q);
     private readonly Func<bool> muteAudioKeyCheck = () => Input.GetKeyDown(KeyCode.M);
+    
+    public static bool playerLayerSwitchEnabled;
+    public bool playerLayerSwitchEnabledInit = true;
 
     private void Awake()
     {
         Instance = this;
         presentLayerMask = LayerMask.GetMask("Present");
         pastLayerMask = LayerMask.GetMask("Past");
+        playerLayerSwitchEnabled = playerLayerSwitchEnabledInit;
     }
 
     private void Start()
