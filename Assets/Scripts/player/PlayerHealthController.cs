@@ -49,7 +49,7 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
     {
         if (transform.position.y < dieBelowY)
         {
-            applyDamage(maxHealth + 1);
+            GameController.Instance.handlePlayerOutBounds();
         }
     }
 }

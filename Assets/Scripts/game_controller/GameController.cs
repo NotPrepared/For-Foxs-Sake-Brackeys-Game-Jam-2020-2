@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour, GroundProvider
     private LayerMask presentLayerMask;
     private LayerMask pastLayerMask;
 
+    private DeathType? deathReason = null;
+
     [Serializable]
     private enum UIState
     {
@@ -62,7 +64,8 @@ public class GameController : MonoBehaviour, GroundProvider
         timer.resumeTimer();
         AudioController.instance.PlayAudio(GameAudioType.ST_01);
         handleUIStateChange(currentState);
-        player.GetComponent<PlayerHealthController>().onHealthChange.AddListener(it => {
+        player.GetComponent<PlayerHealthController>().onHealthChange.AddListener(it =>
+        {
             if (it <= 0)
             {
                 handlePlayerNoHealth();
@@ -118,13 +121,23 @@ public class GameController : MonoBehaviour, GroundProvider
     private void handleOutOfTime()
     {
         PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.TIME;
         handleUIStateChange(UIState.GAME_OVER);
     }
-    
+
     private void handlePlayerNoHealth()
     {
         timer.pauseTimer();
         PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.DAMAGE;
+        handleUIStateChange(UIState.GAME_OVER);
+    }
+
+    public void handlePlayerOutBounds()
+    {
+        timer.pauseTimer();
+        PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.BOUNDS;
         handleUIStateChange(UIState.GAME_OVER);
     }
 
@@ -134,7 +147,7 @@ public class GameController : MonoBehaviour, GroundProvider
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
     // UI Accessed
     // ReSharper disable once UnusedMember.Global
     public void handleSwitchToMainMenu()
@@ -187,13 +200,18 @@ public class GameController : MonoBehaviour, GroundProvider
                 break;
             case UIState.GAME_OVER:
                 applyOnList(UIState.GAME_OVER);
+                if (deathReason != null)
+                {
+                    DisplayDeathReason.Instance.displayDeathReason(deathReason.Value);
+                }
+
                 DisplayDeathMessage.Instance.displayMessage();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
         }
+
         currentState = state;
-        
     }
 
 
@@ -211,4 +229,11 @@ public class GameController : MonoBehaviour, GroundProvider
         MainMenuController.isLevelSelection = true;
         SceneManager.LoadScene(GameScenes.MAIN_MENU);
     }
+}
+
+public enum DeathType
+{
+    TIME,
+    BOUNDS,
+    DAMAGE
 }

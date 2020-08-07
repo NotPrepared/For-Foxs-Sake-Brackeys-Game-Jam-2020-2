@@ -35,7 +35,7 @@ public class DisplayDeathMessage : MonoBehaviour
 
     public void displayMessage()
     {
-        msgForceAppearance.ForEach(m => specialized.Add(m.comparisonInt, m));
+        if (specialized.Count < 1) msgForceAppearance.ForEach(m => specialized.Add(m.comparisonInt, m));
         var deaths = PersistenceHandler.getPlayerDeaths();
         var random = new Random();
         DeathMessage candidate = null;
