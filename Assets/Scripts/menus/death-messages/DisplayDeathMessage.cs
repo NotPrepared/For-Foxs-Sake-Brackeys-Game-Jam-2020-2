@@ -24,7 +24,6 @@ public class DisplayDeathMessage : MonoBehaviour
 
         if (msgForceAppearance == null)
         {
-            Debug.LogWarning("Was null");
             msgForceAppearance = new List<DeathMessage>();
         }
 

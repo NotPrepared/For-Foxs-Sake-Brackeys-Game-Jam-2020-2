@@ -13,6 +13,11 @@ public class PressurePlate : ActivatorBase
     private List<string> tags;
     private int countOfColliders;
 
+    private Vector3 initPos;
+    private Vector3 initScale;
+    private Vector3 shiftedPos;
+    private Vector3 shiftedScale;
+    
     private void Awake()
     {
         currentState = inverted;
@@ -22,6 +27,10 @@ public class PressurePlate : ActivatorBase
         }
         tags = new List<string>();
         input_tags.ForEach(it => tags.Add(GameTags.of(it)));
+        initPos = transform.position;
+        initScale = transform.localScale;
+        shiftedPos = new Vector3(initPos.x, initPos.y + initPos.y / 2, initPos.z);
+        shiftedScale = new Vector3(initScale.x, initScale.y / 2, initScale.z);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,6 +52,20 @@ public class PressurePlate : ActivatorBase
         {
             currentState = false;
             onStateChangeBacking.Invoke(false);   
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (currentState)
+        {
+            transform.localScale = shiftedScale;
+            transform.localPosition = shiftedPos;
+        }
+        else
+        {
+            transform.localScale = initScale;
+            transform.localPosition = initPos;
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -27,6 +28,7 @@ public class AxisMovingPlatform : MonoBehaviour
     private bool invertX, invertY;
 
     public bool freezeMovement;
+    public bool flipSpriteAtTurnPoint;
     
     [SerializeField]
     private bool freezeAtTurnPoint;
@@ -93,6 +95,12 @@ public class AxisMovingPlatform : MonoBehaviour
             if (freezeAtTurnPoint)
             {
                 freezeMovement = true;
+            }
+
+            if (flipSpriteAtTurnPoint)
+            {
+                var spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
 
