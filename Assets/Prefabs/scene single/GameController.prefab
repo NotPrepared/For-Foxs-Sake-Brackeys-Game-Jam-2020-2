@@ -1368,6 +1368,10 @@ MonoBehaviour:
   - text: There is a timeline in which the developers actually implemented a bossfight.
     predicateType: 0
     comparisonInt: 0
+  - text: Just press the button already. There's no reason for buying time. Unless
+      you are in a clock store that is.
+    predicateType: 0
+    comparisonInt: 0
   msgForceAppearance:
   - text: Oh death 69 - Nice!
     predicateType: 1
