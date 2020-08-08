@@ -12,14 +12,12 @@ public class DamagePlatform : MonoBehaviour
     [SerializeField] private float damageCooldown = 2f;
     private float damageCooldownTimer;
 
-    [SerializeField] private List<GameObject> damageable;
 
     private Dictionary<int, IDamageable> presentObj;
 
 
     private void Awake()
     {
-        if (damageable == null) damageable = new List<GameObject>();
         if (presentObj == null) presentObj = new Dictionary<int, IDamageable>();
         damageCooldownTimer = damageCooldown;
     }
@@ -28,12 +26,10 @@ public class DamagePlatform : MonoBehaviour
     {
         try
         {
-            var damageBehaviour = other.gameObject.GetComponent<IDamageable>();
-            var obj = damageable.Find(it => it.GetComponent<IDamageable>() == damageBehaviour)
-                .GetComponent<IDamageable>();
-            if (obj == null) return;
-            if (presentObj.ContainsKey(obj.getID())) return;
-            presentObj.Add(obj.getID(), obj);
+            var comp = other.gameObject.GetComponent<IDamageable>();
+            if (comp == null) return;
+            if (presentObj.ContainsKey(comp.getID())) return;
+            presentObj.Add(comp.getID(), comp);
             //Debug.LogWarning("Added GameObj with id" + obj.getID());
         }
         catch (InvalidCastException ignored)
@@ -46,6 +42,7 @@ public class DamagePlatform : MonoBehaviour
         try
         {
             var damageBehaviour = other.gameObject.GetComponent<IDamageable>();
+            if (damageBehaviour == null) return;
             presentObj.Remove(damageBehaviour.getID());
             //Debug.LogWarning("Removed GameObj with id" + damageBehaviour.getID());
         }

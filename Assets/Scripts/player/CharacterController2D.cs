@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
     private Transform m_GroundCheck; // A position marking where to check if the player is grounded.
 
     [SerializeField] private Transform m_CeilingCheck; // A position marking where to check for ceilings
+    [SerializeField] private Transform m_StuckInEnvironment;
 
     [Header("General")] [Space] [Range(0, .3f)] [SerializeField]
     private float m_MovementSmoothing = .05f; // How much to smooth out the movement
@@ -23,6 +25,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded; // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
+
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true; // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
@@ -80,7 +83,6 @@ public class CharacterController2D : MonoBehaviour, IPusher
 
     private void Awake()
     {
-        m_WhatIsGroundProvider = GameController.Instance;
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_transform = transform;
         hasCrouchDisableCollider = m_CrouchDisableCollider != null;
@@ -99,6 +101,11 @@ public class CharacterController2D : MonoBehaviour, IPusher
         }
 
         OnLandEvent.AddListener(() => { usedDoubleJump = false; });
+    }
+
+    private void Start()
+    {
+        m_WhatIsGroundProvider = GameController.Instance;
     }
 
     private void FixedUpdate()
@@ -131,7 +138,7 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 m_WhatIsGroundProvider.getGroundLayer());
             foreach (var col in colliders)
             {
-                if (col.gameObject != gameObject)
+                if (!col.CompareTag(GameTags.PLAYER))
                 {
                     m_Grounded = true;
                     if (!wasGrounded)
@@ -139,6 +146,29 @@ public class CharacterController2D : MonoBehaviour, IPusher
                 }
             }
 
+            if (!m_Grounded)
+            {
+                colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius,
+                    LayerMask.GetMask("BothLayers"));
+                foreach (var col in colliders)
+                {
+                    if (!col.CompareTag(GameTags.PLAYER))
+                    {
+                        m_Grounded = true;
+                        if (!wasGrounded)
+                            OnLandEvent.Invoke();
+                    }
+                }
+            }
+
+            colliders = Physics2D.OverlapPointAll(m_StuckInEnvironment.position);
+            colliders.ToList().ForEach(c =>
+            {
+                if (!c.gameObject.CompareTag("Player") && !c.isTrigger)
+                {
+                    GetComponent<PlayerHealthController>().applyDamage(50 * Time.fixedDeltaTime);
+                }
+            });
             if (isRecordingRewind)
             {
                 // ReSharper disable once CompareOfFloatsByEqualityOperator
@@ -278,11 +308,13 @@ public class CharacterController2D : MonoBehaviour, IPusher
         }
     }
 
+    private const float JUMP_THRESHOLD = 5f;
     private void checkDoubleJumpMove(bool jump)
     {
-        if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= 0.1f)
+        if (!m_Grounded && jump && !usedDoubleJump && m_Rigidbody2D.velocity.y <= JUMP_THRESHOLD)
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + -1 * m_Rigidbody2D.velocity.y));
+            var resetDownForce = (m_Rigidbody2D.velocity.y < 0) ? -1 * m_Rigidbody2D.velocity.y : 0;
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_doubleJumpForce + resetDownForce));
             usedDoubleJump = true;
         }
     }
@@ -348,6 +380,27 @@ public class CharacterController2D : MonoBehaviour, IPusher
     {
         activePushable = null;
     }
+
+    public void enableMove(MoveTypes typeToAward)
+    {
+        switch (typeToAward)
+        {
+            case MoveTypes.SLAM:
+                slamEnabled = true;
+                break;
+            case MoveTypes.DOUBLE_JUMP:
+                doubleJumpEnabled = true;
+                break;
+            case MoveTypes.LAYER_SWITCH:
+                GameController.playerLayerSwitchEnabled = true;
+                break;
+            case MoveTypes.POS_REWIND:
+                positionRewindEnabled = true;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(typeToAward), typeToAward, null);
+        }
+    }
 }
 
 public class RewindPoint
@@ -368,4 +421,9 @@ public class RewindPoint
     {
         /* Ignored */
     }
+}
+
+public enum MoveTypes
+{
+    SLAM, DOUBLE_JUMP, LAYER_SWITCH, POS_REWIND
 }

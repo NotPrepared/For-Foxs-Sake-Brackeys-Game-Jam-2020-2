@@ -16,22 +16,22 @@ public class MenuButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Vertical") != 0)
+        if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
         {
             if (!keyDown)
             {
-                if (Input.GetAxisRaw("Vertical") < 0)
+                if (Input.GetAxisRaw("Vertical") < 0 || Input.GetAxisRaw("Horizontal") > 0)
                 {
                     if (index < maxIndex)
                     {
                         index++;
                     }
-                    else
+                    else 
                     {
                         index = 0;
                     }
                 }
-                else if (Input.GetAxisRaw("Vertical") > 0)
+                else if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Horizontal") < 0)
                 {
                     if (index > 0)
                     {

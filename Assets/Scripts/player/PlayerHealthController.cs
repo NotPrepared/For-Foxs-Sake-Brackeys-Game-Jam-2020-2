@@ -16,7 +16,7 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        if (onHealthChange != null)
+        if (onHealthChange == null)
         {
             onHealthChange = new HealthChangedEvent();
         }
@@ -24,8 +24,15 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        onHealthChange.AddListener(f => healthBar.text = $"{f:0.###}");
-        healthBar.text = $"{currentHealth:0.###}";
+        if (healthBar != null)
+        {
+            onHealthChange.AddListener(f => healthBar.text = $"{f:0.###}");
+            healthBar.text = $"{currentHealth:0.###}";   
+        }
+        else
+        {
+            Debug.LogWarning("healthBar is set to null not updates for player health are displayed");
+        }
     }
 
 
@@ -42,7 +49,7 @@ public class PlayerHealthController : MonoBehaviour, IDamageable
     {
         if (transform.position.y < dieBelowY)
         {
-            applyDamage(maxHealth + 1);
+            GameController.Instance.handlePlayerOutBounds();
         }
     }
 }

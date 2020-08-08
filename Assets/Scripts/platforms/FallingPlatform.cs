@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
@@ -7,6 +8,7 @@ public class FallingPlatform : MonoBehaviour
     [SerializeField] private float fallDelay;
     [SerializeField] private float revokeJumpableDelay;
     [SerializeField] private GameObject fallTarget;
+    [SerializeField] private List<GameObject> disableOnFall;
 
     private ITimer timer;
     [SerializeField]
@@ -17,6 +19,12 @@ public class FallingPlatform : MonoBehaviour
     private bool hasFallTimestamp;
 
     private bool isFalling;
+
+    private void Awake()
+    {
+        if (disableOnFall == null) disableOnFall = new List<GameObject>();
+    }
+
     private void Start()
     {
         timer = TimerImpl.Instance;
@@ -25,7 +33,7 @@ public class FallingPlatform : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hasFallTimestamp) return;
-        if (other.gameObject == fallTarget) return;
+        if (!other.CompareTag("Player")) return;
         startTimer();
     }
     
@@ -58,6 +66,7 @@ public class FallingPlatform : MonoBehaviour
         if (timer.getRemainingTime() <= fallTimestamp)
         {
             isFalling = true;
+            disableOnFall.ForEach(o => o.SetActive(false));
             var rb = fallTarget.AddComponent<Rigidbody2D>();
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             revokeJumpTimestamp = timer.getRemainingTime() - revokeJumpableDelay;

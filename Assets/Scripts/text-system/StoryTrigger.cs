@@ -10,6 +10,7 @@ public class StoryTrigger : MonoBehaviour
     [SerializeField] private bool requiresLayerNow;
     [SerializeField] private bool requiresOtherTriggerFired;
     [SerializeField] private StoryTrigger requiredTrigger;
+    [SerializeField] private bool requireAcknowledgement;
 
     [HideInInspector]
     public bool hasTriggered;
@@ -45,7 +46,7 @@ public class StoryTrigger : MonoBehaviour
             }
         }
 
-        TextDisplayController.Instance.setDisplayText(text, disappearAfter);
+        TextDisplayController.Instance.setDisplayText(text, disappearAfter, requireAcknowledgement);
         hasTriggered = true;
     }
 }

@@ -27,18 +27,14 @@ public abstract class Pushable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<MonoBehaviour>() is IPusher pusher)
-        {
-            pusher.pushStarted(weight, this);
-        }
+        var pusherComponent = other.gameObject.GetComponent<IPusher>();
+        pusherComponent?.pushStarted(weight, this);
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<MonoBehaviour>() is IPusher pusher)
-        {
-            pusher.pushStopped(this);
-        }
+        var pusherComponent = other.gameObject.GetComponent<IPusher>();
+        pusherComponent?.pushStopped(this);
     }
 }
 

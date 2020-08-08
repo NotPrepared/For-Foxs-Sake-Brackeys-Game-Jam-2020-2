@@ -11,29 +11,57 @@ public class TextDisplayController : MonoBehaviour
 
     private float fadeAfter;
     private bool hasContent;
+    private bool requireAck;
+    private bool acked;
+
+    private float interactCD;
 
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
-        setDisplayText("", 0);
+        setDisplayText("", 0, false);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!hasContent) return;
-        fadeAfter -= Time.fixedDeltaTime;
-        if (fadeAfter > 0) return;
-        // Delete text
-        textDisplayRoot.SetActive(false);
-        hasContent = false;
+        if (requireAck)
+        {
+            if (acked) return;
+            interactCD -= Time.unscaledDeltaTime;
+            if (interactCD > 0) return;
+            if (Input.GetAxisRaw("Submit") == 1)
+            {
+                acked = true;
+                TimerImpl.Instance.resumeTimer();
+                // Delete text
+                textDisplayRoot.SetActive(false);
+                hasContent = false;
+            }
+        }
+        else
+        {
+            fadeAfter -= Time.fixedDeltaTime;
+            if (fadeAfter > 0) return;
+            // Delete text
+            textDisplayRoot.SetActive(false);
+            hasContent = false;
+        }
     }
 
-    public void setDisplayText(string text, float fadeTime)
+    public void setDisplayText(string text, float fadeTime, bool reqAck)
     {
         hasContent = true;
+        requireAck = reqAck;
+        acked = false;
+        if (reqAck)
+        {
+            TimerImpl.Instance.pauseTimer();
+        }
+        interactCD = 0.8f;
         fadeAfter = fadeTime;
         display.text = text;
-       textDisplayRoot.SetActive(true);
+        textDisplayRoot.SetActive(true);
     }
 }

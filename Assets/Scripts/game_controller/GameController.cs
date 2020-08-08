@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour, GroundProvider
     private LayerMask presentLayerMask;
     private LayerMask pastLayerMask;
 
+    private DeathType? deathReason = null;
+
     [Serializable]
     private enum UIState
     {
@@ -43,14 +45,18 @@ public class GameController : MonoBehaviour, GroundProvider
     private ITimer timer;
 
     private readonly Func<bool> pauseKeyCheck = () => Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape);
-    private readonly Func<bool> changeTimeLayerKeyCheck = () => Input.GetKeyDown(KeyCode.Q);
+    private readonly Func<bool> changeTimeLayerKeyCheck = () => playerLayerSwitchEnabled && Input.GetKeyDown(KeyCode.Q);
     private readonly Func<bool> muteAudioKeyCheck = () => Input.GetKeyDown(KeyCode.M);
+    
+    public static bool playerLayerSwitchEnabled;
+    public bool playerLayerSwitchEnabledInit = true;
 
     private void Awake()
     {
         Instance = this;
         presentLayerMask = LayerMask.GetMask("Present");
         pastLayerMask = LayerMask.GetMask("Past");
+        playerLayerSwitchEnabled = playerLayerSwitchEnabledInit;
     }
 
     private void Start()
@@ -62,7 +68,8 @@ public class GameController : MonoBehaviour, GroundProvider
         timer.resumeTimer();
         AudioController.instance.PlayAudio(GameAudioType.ST_01);
         handleUIStateChange(currentState);
-        player.GetComponent<PlayerHealthController>().onHealthChange.AddListener(it => {
+        player.GetComponent<PlayerHealthController>().onHealthChange.AddListener(it =>
+        {
             if (it <= 0)
             {
                 handlePlayerNoHealth();
@@ -95,7 +102,7 @@ public class GameController : MonoBehaviour, GroundProvider
         else
         {
             // Time is over
-            handleOutOfTime();
+            if (!timer.isPaused()) handleOutOfTime();
         }
     }
 
@@ -117,13 +124,25 @@ public class GameController : MonoBehaviour, GroundProvider
 
     private void handleOutOfTime()
     {
-        TODO.asLogWarning("Game End not implemented");
+        timer.pauseTimer();
+        PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.TIME;
         handleUIStateChange(UIState.GAME_OVER);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
     private void handlePlayerNoHealth()
     {
+        timer.pauseTimer();
+        PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.DAMAGE;
+        handleUIStateChange(UIState.GAME_OVER);
+    }
+
+    public void handlePlayerOutBounds()
+    {
+        timer.pauseTimer();
+        PersistenceHandler.incrementPlayerDeaths();
+        deathReason = DeathType.BOUNDS;
         handleUIStateChange(UIState.GAME_OVER);
     }
 
@@ -133,7 +152,7 @@ public class GameController : MonoBehaviour, GroundProvider
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
     // UI Accessed
     // ReSharper disable once UnusedMember.Global
     public void handleSwitchToMainMenu()
@@ -186,12 +205,18 @@ public class GameController : MonoBehaviour, GroundProvider
                 break;
             case UIState.GAME_OVER:
                 applyOnList(UIState.GAME_OVER);
+                if (deathReason != null)
+                {
+                    DisplayDeathReason.Instance.displayDeathReason(deathReason.Value);
+                }
+
+                DisplayDeathMessage.Instance.displayMessage();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, null);
         }
+
         currentState = state;
-        
     }
 
 
@@ -200,8 +225,20 @@ public class GameController : MonoBehaviour, GroundProvider
     public void completedLevel()
     {
         ignoreTimerOver = true;
-        PersistenceHandler.saveClearedLevel(GameScenes.LEVELS.IndexOf(SceneManager.GetActiveScene().name));
+        var curLevel = GameScenes.LEVELS.IndexOf(SceneManager.GetActiveScene().name);
+        if (curLevel > PersistenceHandler.continueGame())
+        {
+            PersistenceHandler.saveClearedLevel(curLevel);
+        }
+
         MainMenuController.isLevelSelection = true;
         SceneManager.LoadScene(GameScenes.MAIN_MENU);
     }
+}
+
+public enum DeathType
+{
+    TIME,
+    BOUNDS,
+    DAMAGE
 }
