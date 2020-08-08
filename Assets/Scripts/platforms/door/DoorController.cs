@@ -1,15 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 public class DoorController : AxisMovingPlatform
 {
     [SerializeField] private ActivatorBase activator;
-    
 
-    private void Start()
+    private bool hasListener;
+
+    private new void Start()
     {
         base.Start();
         freezeMovement = !activator.getCurrent();
-        activator.onStateChange.AddListener(b => freezeMovement = !b);
+    }
+
+    private void Update()
+    {
+        if (hasListener) return;
+        Debug.LogWarning("Searching");
+        if (activator.onStateChange != null)
+        {
+            Debug.LogWarning("Has Listener");
+            activator.onStateChange?.AddListener(b => freezeMovement = !b);
+            hasListener = true;
+        }
     }
 }

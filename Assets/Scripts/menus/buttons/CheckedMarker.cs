@@ -14,6 +14,7 @@ public class CheckedMarker : MonoBehaviour
 
     public void updateCheckedState(bool state)
     {
+        return;
         isChecked = state;
         var textComponent = textGameObject.GetComponent<TextMeshProUGUI>();
         var initialText = textComponent.text.Replace(CHECK, "");

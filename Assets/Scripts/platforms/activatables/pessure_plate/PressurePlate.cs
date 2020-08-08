@@ -57,6 +57,7 @@ public class PressurePlate : ActivatorBase
 
     private void FixedUpdate()
     {
+        return;
         if (currentState)
         {
             transform.localScale = shiftedScale;
