@@ -1138,16 +1138,6 @@ PrefabInstance:
       propertyPath: isPresent
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2409773393636553731, guid: 7fd564acc5899e643bb710ec967d440a,
-        type: 3}
-      propertyPath: msgs.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2409773393636553731, guid: 7fd564acc5899e643bb710ec967d440a,
-        type: 3}
-      propertyPath: msgs.Array.data[8].text
-      value: So try again ...
-      objectReference: {fileID: 0}
     - target: {fileID: 4055476543289286189, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1191,27 +1181,27 @@ PrefabInstance:
     - target: {fileID: 5898126032181358898, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 5898126032181358898, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5898126032181358898, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5898126032181358898, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5898126032181358898, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6645870565174658453, guid: 7fd564acc5899e643bb710ec967d440a,
         type: 3}
