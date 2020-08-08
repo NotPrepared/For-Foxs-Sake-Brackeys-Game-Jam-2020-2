@@ -15,7 +15,6 @@ public class MainMenuController : MonoBehaviour
     public TMP_Text newGameORResetBtnLabel;
     public MenuButton continueBtn;
 
-    public MenuButton sandboxBtn;
     public MenuButton quitBtn;
 
     public static bool isLevelSelection;
@@ -67,7 +66,6 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         newGameORResetBtn.onClick.AddListener(newGame);
-        sandboxBtn.onClick.AddListener(openSandbox);
         quitBtn.onClick.AddListener(Application.Quit);
         updateUI();
         
@@ -101,11 +99,10 @@ public class MainMenuController : MonoBehaviour
         {
             continueBtn.thisIndex = 0;
             newGameORResetBtn.thisIndex = 1;
-            sandboxBtn.thisIndex = 2;
-            quitBtn.thisIndex = 3;
+            quitBtn.thisIndex = 2;
             
             mainMenuBtnController.index = 0;
-            mainMenuBtnController.maxIndex = 3;
+            mainMenuBtnController.maxIndex = 2;
             
             newGameORResetBtnLabel.text = "Reset Game";
             continueBtn.gameObject.SetActive(true);
@@ -115,10 +112,9 @@ public class MainMenuController : MonoBehaviour
         {
             continueBtn.thisIndex = -1;
             newGameORResetBtn.thisIndex = 0;
-            sandboxBtn.thisIndex = 1;
-            quitBtn.thisIndex = 2;
+            quitBtn.thisIndex = 1;
             mainMenuBtnController.index = 0;
-            mainMenuBtnController.maxIndex = 2;
+            mainMenuBtnController.maxIndex = 1;
             newGameORResetBtnLabel.text = "New Game";
             continueBtn.gameObject.SetActive(false);
             continueBtn.onClick.RemoveAllListeners();
