@@ -208,7 +208,7 @@ MonoBehaviour:
   m_doubleJumpForce: 50
   m_CrouchSpeed: 0.36
   m_CrouchDisableCollider: {fileID: 283846421176874834}
-  slamEnabled: 1
+  slamEnabled: 0
   m_slamForce: -100
   positionRewindEnabled: 1
   startPositionPrefab: {fileID: 712228202905419467, guid: d8ebe6c40ab3caf4c9e8a34c612339dc,

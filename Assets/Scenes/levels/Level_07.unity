@@ -1986,12 +1986,12 @@ PrefabInstance:
     - target: {fileID: 4107135612429441635, guid: f1bb58ff59313a04bae06b5a5a583e1c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 87.44
+      value: 70.77
       objectReference: {fileID: 0}
     - target: {fileID: 4107135612429441635, guid: f1bb58ff59313a04bae06b5a5a583e1c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.28
+      value: 7.36
       objectReference: {fileID: 0}
     - target: {fileID: 4107135612429441635, guid: f1bb58ff59313a04bae06b5a5a583e1c,
         type: 3}
@@ -2032,6 +2032,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107135612429441635, guid: f1bb58ff59313a04bae06b5a5a583e1c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107135612429441635, guid: f1bb58ff59313a04bae06b5a5a583e1c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4107135612429441636, guid: f1bb58ff59313a04bae06b5a5a583e1c,
         type: 3}
@@ -6329,6 +6339,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 321283893}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1180640197
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180640196}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: aca622bdaeed9974897b6b3bd0b0e7ca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!224 &1182498902 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5545091236164707266, guid: 3d5c72f28400adb46b8887172d67cded,
