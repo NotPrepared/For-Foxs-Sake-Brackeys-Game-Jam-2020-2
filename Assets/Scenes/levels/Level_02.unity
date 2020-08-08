@@ -121,6 +121,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &21971195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: requireAcknowledgement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: text
+      value: I need to find a mecanism to open the door.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: disappearAfter
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.48166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410794, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_Name
+      value: TextTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f5fe44528e24f74ba2a3e8e070cef90, type: 3}
 --- !u!1001 &261340475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +279,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3917ae682c64d954880aa51ccfe50af3, type: 3}
+--- !u!1001 &265050262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: text
+      value: 'Move: Player Rewind\n When you press ''W'' a mark is placed to which
+        you can return within 5 seconds by pressing ''W'' again.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: requireAcknowledgement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.581192
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410794, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_Name
+      value: TextTrigger (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f5fe44528e24f74ba2a3e8e070cef90, type: 3}
 --- !u!1 &401753047
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &410504814
 PrefabInstance:
@@ -336,6 +500,80 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 410504814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &813500363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: text
+      value: This is a steep cliff I can't climb up again if i fall.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.68539
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410794, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_Name
+      value: TextTrigger (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f5fe44528e24f74ba2a3e8e070cef90, type: 3}
 --- !u!1 &888619042
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +617,7 @@ Transform:
   - {fileID: 1707377351}
   - {fileID: 2026309594}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1325866934
 PrefabInstance:
@@ -593,7 +831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1445598523
 PrefabInstance:
@@ -669,6 +907,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afec05fc24bf83b419cea8210af8aa6c, type: 3}
+--- !u!1001 &1655783401
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: text
+      value: Finally, the door is moving down. - But how do i get back up ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: disappearAfter
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 65.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410793, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399655859788410794, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
+        type: 3}
+      propertyPath: m_Name
+      value: TextTrigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f5fe44528e24f74ba2a3e8e070cef90, type: 3}
 --- !u!1 &1707377350
 GameObject:
   m_ObjectHideFlags: 0
