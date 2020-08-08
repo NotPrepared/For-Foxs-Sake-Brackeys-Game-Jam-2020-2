@@ -1335,7 +1335,7 @@ MonoBehaviour:
   - text: Never gonna give up
     predicateType: 0
     comparisonInt: 0
-  - text: Do you have time for this kind of playstyle
+  - text: Do you have time for this kind of playstyle?
     predicateType: 3
     comparisonInt: 15
   - text: Time brings all things to pass
@@ -1345,6 +1345,27 @@ MonoBehaviour:
     predicateType: 0
     comparisonInt: 0
   - text: So try again ...
+    predicateType: 0
+    comparisonInt: 0
+  - text: Some people die, others just run out of time.
+    predicateType: 0
+    comparisonInt: 0
+  - text: You will die faster the last time
+    predicateType: 0
+    comparisonInt: 0
+  - text: I suggest actually completing a level
+    predicateType: 0
+    comparisonInt: 0
+  - text: Cheers luv' oops wrong game
+    predicateType: 0
+    comparisonInt: 0
+  - text: Did you know? Eating clocks is very time consuming.
+    predicateType: 0
+    comparisonInt: 0
+  - text: I have seen the future. You will succeed ... eventually.
+    predicateType: 0
+    comparisonInt: 0
+  - text: There is a timeline in which the developers actually implemented a bossfight.
     predicateType: 0
     comparisonInt: 0
   msgForceAppearance:
@@ -1357,6 +1378,9 @@ MonoBehaviour:
   - text: Enemy Pentakill
     predicateType: 1
     comparisonInt: 5
+  - text: Death number 100! Congratulations.
+    predicateType: 1
+    comparisonInt: 100
 --- !u!1 &2324185423911573375
 GameObject:
   m_ObjectHideFlags: 0
