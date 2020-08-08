@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
         type: 3}
       propertyPath: text
-      value: 'Move: Player Rewind\n When you press ''W'' a mark is placed to which
+      value: 'Move: Player Rewind - When you press ''W'' a mark is placed to which
         you can return within 5 seconds by pressing ''W'' again.'
       objectReference: {fileID: 0}
     - target: {fileID: 1399655859788410792, guid: 9f5fe44528e24f74ba2a3e8e070cef90,
